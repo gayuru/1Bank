@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55C58800238FC36F00A6DC85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C587FF238FC36F00A6DC85 /* AppDelegate.swift */; };
+		55C58802238FC36F00A6DC85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C58801238FC36F00A6DC85 /* SceneDelegate.swift */; };
+		55C58804238FC36F00A6DC85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C58803238FC36F00A6DC85 /* ViewController.swift */; };
+		55C58807238FC36F00A6DC85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C58805238FC36F00A6DC85 /* Main.storyboard */; };
+		55C58809238FC37100A6DC85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C58808238FC37100A6DC85 /* Assets.xcassets */; };
+		55C5880C238FC37100A6DC85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5880A238FC37100A6DC85 /* LaunchScreen.storyboard */; };
+		E602DA63F9F648FB8C7169D4 /* Pods_OneBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C5B6FB31C1C0F7625ED260 /* Pods_OneBank.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24C5B6FB31C1C0F7625ED260 /* Pods_OneBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C587FC238FC36F00A6DC85 /* OneBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C587FF238FC36F00A6DC85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55C58801238FC36F00A6DC85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		55C58803238FC36F00A6DC85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55C58806238FC36F00A6DC85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55C58808238FC37100A6DC85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55C5880B238FC37100A6DC85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55C5880D238FC37100A6DC85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B42CF4AAFB6C5C4F7DCE17EA /* Pods-OneBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBank.debug.xcconfig"; path = "Target Support Files/Pods-OneBank/Pods-OneBank.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1E0175D9ECAF7B8E0ABF5C /* Pods-OneBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBank.release.xcconfig"; path = "Target Support Files/Pods-OneBank/Pods-OneBank.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55C587F9238FC36F00A6DC85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E602DA63F9F648FB8C7169D4 /* Pods_OneBank.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12E70A55F8DEF768C364AE87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24C5B6FB31C1C0F7625ED260 /* Pods_OneBank.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55C587F3238FC36F00A6DC85 = {
+			isa = PBXGroup;
+			children = (
+				55C587FE238FC36F00A6DC85 /* OneBank */,
+				55C587FD238FC36F00A6DC85 /* Products */,
+				858B7A7FD8599969653ED633 /* Pods */,
+				12E70A55F8DEF768C364AE87 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		55C587FD238FC36F00A6DC85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55C587FC238FC36F00A6DC85 /* OneBank.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55C587FE238FC36F00A6DC85 /* OneBank */ = {
+			isa = PBXGroup;
+			children = (
+				55C58815238FC3EA00A6DC85 /* View */,
+				55C58814238FC3DD00A6DC85 /* Model */,
+				55C58813238FC3D200A6DC85 /* ViewModel */,
+				55C587FF238FC36F00A6DC85 /* AppDelegate.swift */,
+				55C58801238FC36F00A6DC85 /* SceneDelegate.swift */,
+				55C58808238FC37100A6DC85 /* Assets.xcassets */,
+				55C5880D238FC37100A6DC85 /* Info.plist */,
+			);
+			path = OneBank;
+			sourceTree = "<group>";
+		};
+		55C58813238FC3D200A6DC85 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				55C58803238FC36F00A6DC85 /* ViewController.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		55C58814238FC3DD00A6DC85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55C58815238FC3EA00A6DC85 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55C58805238FC36F00A6DC85 /* Main.storyboard */,
+				55C5880A238FC37100A6DC85 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		858B7A7FD8599969653ED633 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B42CF4AAFB6C5C4F7DCE17EA /* Pods-OneBank.debug.xcconfig */,
+				EF1E0175D9ECAF7B8E0ABF5C /* Pods-OneBank.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55C587FB238FC36F00A6DC85 /* OneBank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55C58810238FC37100A6DC85 /* Build configuration list for PBXNativeTarget "OneBank" */;
+			buildPhases = (
+				31177116DBF4069327E32279 /* [CP] Check Pods Manifest.lock */,
+				55C587F8238FC36F00A6DC85 /* Sources */,
+				55C587F9238FC36F00A6DC85 /* Frameworks */,
+				55C587FA238FC36F00A6DC85 /* Resources */,
+				0D40E02032AA4B5CAD693227 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneBank;
+			productName = OneBank;
+			productReference = 55C587FC238FC36F00A6DC85 /* OneBank.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55C587F4238FC36F00A6DC85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = iSwift;
+				TargetAttributes = {
+					55C587FB238FC36F00A6DC85 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 55C587F7238FC36F00A6DC85 /* Build configuration list for PBXProject "OneBank" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55C587F3238FC36F00A6DC85;
+			productRefGroup = 55C587FD238FC36F00A6DC85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55C587FB238FC36F00A6DC85 /* OneBank */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55C587FA238FC36F00A6DC85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C5880C238FC37100A6DC85 /* LaunchScreen.storyboard in Resources */,
+				55C58809238FC37100A6DC85 /* Assets.xcassets in Resources */,
+				55C58807238FC36F00A6DC85 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D40E02032AA4B5CAD693227 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneBank/Pods-OneBank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneBank/Pods-OneBank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OneBank/Pods-OneBank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31177116DBF4069327E32279 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55C587F8238FC36F00A6DC85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C58804238FC36F00A6DC85 /* ViewController.swift in Sources */,
+				55C58800238FC36F00A6DC85 /* AppDelegate.swift in Sources */,
+				55C58802238FC36F00A6DC85 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		55C58805238FC36F00A6DC85 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55C58806238FC36F00A6DC85 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55C5880A238FC37100A6DC85 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55C5880B238FC37100A6DC85 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55C5880E238FC37100A6DC85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55C5880F238FC37100A6DC85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55C58811238FC37100A6DC85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B42CF4AAFB6C5C4F7DCE17EA /* Pods-OneBank.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56CT9TQ9TD;
+				INFOPLIST_FILE = OneBank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iSwift.OneBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55C58812238FC37100A6DC85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF1E0175D9ECAF7B8E0ABF5C /* Pods-OneBank.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56CT9TQ9TD;
+				INFOPLIST_FILE = OneBank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iSwift.OneBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55C587F7238FC36F00A6DC85 /* Build configuration list for PBXProject "OneBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55C5880E238FC37100A6DC85 /* Debug */,
+				55C5880F238FC37100A6DC85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55C58810238FC37100A6DC85 /* Build configuration list for PBXNativeTarget "OneBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55C58811238FC37100A6DC85 /* Debug */,
+				55C58812238FC37100A6DC85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55C587F4238FC36F00A6DC85 /* Project object */;
+}
