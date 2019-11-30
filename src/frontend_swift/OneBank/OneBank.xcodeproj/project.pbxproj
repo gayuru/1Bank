@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5547C90823920C5100FFD5A4 /* Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90323920C5100FFD5A4 /* Proxima Nova Black.otf */; };
+		5547C90923920C5100FFD5A4 /* Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90423920C5100FFD5A4 /* Proxima Nova Thin.otf */; };
+		5547C90A23920C5100FFD5A4 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90523920C5100FFD5A4 /* ProximaNova-Regular.otf */; };
+		5547C90B23920C5100FFD5A4 /* Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90623920C5100FFD5A4 /* Proxima Nova Bold.otf */; };
+		5547C90C23920C5100FFD5A4 /* Proxima Nova Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90723920C5100FFD5A4 /* Proxima Nova Extrabold.otf */; };
+		557EA79423921C24000AD213 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557EA79323921C24000AD213 /* Login.storyboard */; };
 		55C58800238FC36F00A6DC85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C587FF238FC36F00A6DC85 /* AppDelegate.swift */; };
 		55C58802238FC36F00A6DC85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C58801238FC36F00A6DC85 /* SceneDelegate.swift */; };
 		55C58804238FC36F00A6DC85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C58803238FC36F00A6DC85 /* ViewController.swift */; };
@@ -19,6 +25,12 @@
 
 /* Begin PBXFileReference section */
 		24C5B6FB31C1C0F7625ED260 /* Pods_OneBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5547C90323920C5100FFD5A4 /* Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Black.otf"; path = "OneBank/Assets.xcassets/Proxima Nova Black.otf"; sourceTree = SOURCE_ROOT; };
+		5547C90423920C5100FFD5A4 /* Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Thin.otf"; path = "OneBank/Assets.xcassets/Proxima Nova Thin.otf"; sourceTree = SOURCE_ROOT; };
+		5547C90523920C5100FFD5A4 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "OneBank/Assets.xcassets/ProximaNova-Regular.otf"; sourceTree = SOURCE_ROOT; };
+		5547C90623920C5100FFD5A4 /* Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Bold.otf"; path = "OneBank/Assets.xcassets/Proxima Nova Bold.otf"; sourceTree = SOURCE_ROOT; };
+		5547C90723920C5100FFD5A4 /* Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Extrabold.otf"; path = "OneBank/Assets.xcassets/Proxima Nova Extrabold.otf"; sourceTree = SOURCE_ROOT; };
+		557EA79323921C24000AD213 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		55C587FC238FC36F00A6DC85 /* OneBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C587FF238FC36F00A6DC85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C58801238FC36F00A6DC85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,9 +64,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5547C90223920C3D00FFD5A4 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5547C90323920C5100FFD5A4 /* Proxima Nova Black.otf */,
+				5547C90623920C5100FFD5A4 /* Proxima Nova Bold.otf */,
+				5547C90723920C5100FFD5A4 /* Proxima Nova Extrabold.otf */,
+				5547C90423920C5100FFD5A4 /* Proxima Nova Thin.otf */,
+				5547C90523920C5100FFD5A4 /* ProximaNova-Regular.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		55C587F3238FC36F00A6DC85 = {
 			isa = PBXGroup;
 			children = (
+				5547C90223920C3D00FFD5A4 /* fonts */,
 				55C587FE238FC36F00A6DC85 /* OneBank */,
 				55C587FD238FC36F00A6DC85 /* Products */,
 				858B7A7FD8599969653ED633 /* Pods */,
@@ -105,6 +130,7 @@
 				55C58805238FC36F00A6DC85 /* Main.storyboard */,
 				55C5880A238FC37100A6DC85 /* LaunchScreen.storyboard */,
 				7718B7CF2391F6500004BFA4 /* Dashboard.storyboard */,
+				557EA79323921C24000AD213 /* Login.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,9 +205,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7718B7D02391F6500004BFA4 /* Dashboard.storyboard in Resources */,
+				5547C90B23920C5100FFD5A4 /* Proxima Nova Bold.otf in Resources */,
+				5547C90A23920C5100FFD5A4 /* ProximaNova-Regular.otf in Resources */,
+				5547C90923920C5100FFD5A4 /* Proxima Nova Thin.otf in Resources */,
 				55C5880C238FC37100A6DC85 /* LaunchScreen.storyboard in Resources */,
 				55C58809238FC37100A6DC85 /* Assets.xcassets in Resources */,
 				55C58807238FC36F00A6DC85 /* Main.storyboard in Resources */,
+				5547C90C23920C5100FFD5A4 /* Proxima Nova Extrabold.otf in Resources */,
+				557EA79423921C24000AD213 /* Login.storyboard in Resources */,
+				5547C90823920C5100FFD5A4 /* Proxima Nova Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
