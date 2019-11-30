@@ -8,17 +8,20 @@
 
 import UIKit
 
-class DashboadViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
-
+class DashboadViewController: UIViewController {
+    
     @IBOutlet weak var setttingsView: UIView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var cardCollectionView: UICollectionView!
+    @IBOutlet weak var servicesCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         cardCollectionView.delegate = self
         cardCollectionView.dataSource = self
+        servicesCollectionView.delegate = self
+        servicesCollectionView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
@@ -27,35 +30,61 @@ class DashboadViewController: UIViewController,UICollectionViewDelegate,UICollec
         profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
         profileImage.clipsToBounds = true
     }
+}
+
+extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataSource{
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-          return 5
-      }
-      
-      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as! CardCollectionViewCell
-        cell.balanceLabel.textColor = .black
-        cell.balanceLabel.text = "$100.00"
-        if indexPath.row  == 0{
-            let radius: CGFloat = 10
-            cell.layer.cornerRadius = radius
-            cell.layer.shadowColor = UIColor.init(red: 189, green: 208, blue: 240).cgColor
-            cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-            cell.layer.shadowRadius = 3.0
-            cell.layer.shadowOpacity = 0.5
-            // Never mask the shadow as it falls outside the view
-            cell.layer.masksToBounds = false
-            cell.cardTypeImage.image = UIImage(named: "")
-            cell.bankImage.image = UIImage(named: "")
-            cell.balanceLabel.numberOfLines = 1
-            cell.frame.origin.y = 50
+        if collectionView == cardCollectionView{
+            return 5
+        }else{
+            return 8
         }
         
-        return cell
-      }
-      
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == cardCollectionView{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as! CardCollectionViewCell
+            cell.balanceLabel.textColor = .black
+            cell.balanceLabel.text = "$100.00"
+            if indexPath.row  == 0{
+                let radius: CGFloat = 10
+                cell.layer.cornerRadius = radius
+                cell.layer.shadowColor = UIColor.init(red: 189, green: 208, blue: 240).cgColor
+                cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+                cell.layer.shadowRadius = 3.0
+                cell.layer.shadowOpacity = 0.5
+                // Never mask the shadow as it falls outside the view
+                cell.layer.masksToBounds = false
+                cell.cardTypeImage.image = UIImage(named: "")
+                cell.bankImage.image = UIImage(named: "")
+                cell.balanceLabel.numberOfLines = 1
+                cell.frame.origin.y = 50
+            }
+            
+            return cell
+        }else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "servicesCell", for: indexPath) as! ServicesCollectionViewCell
+//            cell.backgroundView?.backgroundColor = UIColor(red: 224, green: 236, blue: 255)
+//            cell.backgroundView.backgroundColor = UIColor(red: 224, green: 236, blue: 255)
+            return cell
+        }
+    }
+}
 
+
+extension DashboadViewController: UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell.init()
+    }
+    
+    
 }
 
 //MARK:- UIColor Extensions for HexCode
