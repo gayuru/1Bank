@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="1GG-Sa-hWz">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="tk9-9s-JmK" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="tk9-9s-JmK" customClass="LoginViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tNh-u7-PjO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--InitialAccount-->
+        <!--Dashboard-->
         <scene sceneID="QWg-vt-wWm">
             <objects>
-                <viewControllerPlaceholder storyboardName="InitialAccount" id="YtP-o9-a0u" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Dashboard" id="YtP-o9-a0u" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtF-jq-tf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="668" y="189"/>
