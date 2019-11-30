@@ -5,6 +5,7 @@ class User(db.Model):
     firstName = db.Column(db.String(200), unique=False, nullable=True)
     lastName = db.Column(db.String(200), unique=False, nullable=True)
     password = db.Column(db.String(200), unique=False,nullable=True)
+    bankAccounts = db.relationship("BankAccount", backref='user')
 
     def __repr__(self):
         return '<User  %r>' % self.id
@@ -13,6 +14,8 @@ class BankAccount(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     accountName = db.Column(db.String(200), unique=False, nullable=True)
     bankName = db.Column(db.String(200), unique=False, nullable=True)
+    user_id = db.Column(db.Integer, db.foreignKey('user.id'), nullable=False)
+
     def __repr__(self):
         return '<Bank Account  %r>' % self.id
 
