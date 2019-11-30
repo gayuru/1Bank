@@ -16,6 +16,7 @@
 		5525BDF32392F98000632750 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5525BDF22392F98000632750 /* Account.storyboard */; };
 		5525BDF52392FAAC00632750 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525BDF42392FAAC00632750 /* AccountViewController.swift */; };
 		5525BDF72392FCA600632750 /* AccountsCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525BDF62392FCA600632750 /* AccountsCardCollectionViewCell.swift */; };
+		5525BDF92393340300632750 /* InitialAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525BDF82393340300632750 /* InitialAccountViewController.swift */; };
 		5547C90823920C5100FFD5A4 /* Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90323920C5100FFD5A4 /* Proxima Nova Black.otf */; };
 		5547C90923920C5100FFD5A4 /* Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90423920C5100FFD5A4 /* Proxima Nova Thin.otf */; };
 		5547C90A23920C5100FFD5A4 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90523920C5100FFD5A4 /* ProximaNova-Regular.otf */; };
@@ -61,6 +62,7 @@
 		5525BDF22392F98000632750 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		5525BDF42392FAAC00632750 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		5525BDF62392FCA600632750 /* AccountsCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		5525BDF82393340300632750 /* InitialAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialAccountViewController.swift; sourceTree = "<group>"; };
 		5547C90323920C5100FFD5A4 /* Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Black.otf"; path = "OneBank/Assets.xcassets/Proxima Nova Black.otf"; sourceTree = SOURCE_ROOT; };
 		5547C90423920C5100FFD5A4 /* Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Thin.otf"; path = "OneBank/Assets.xcassets/Proxima Nova Thin.otf"; sourceTree = SOURCE_ROOT; };
 		5547C90523920C5100FFD5A4 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "OneBank/Assets.xcassets/ProximaNova-Regular.otf"; sourceTree = SOURCE_ROOT; };
@@ -72,7 +74,6 @@
 		557EA79323921C24000AD213 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		557EA79623922494000AD213 /* InitialAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialAccount.storyboard; sourceTree = "<group>"; };
 		557EA798239228DC000AD213 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		557EA79A23922E76000AD213 /* InitialAccount_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAccount_ViewController.swift; sourceTree = "<group>"; };
 		55A712252392822D00908EF0 /* SelectBank_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBank_ViewController.swift; sourceTree = "<group>"; };
 		55A712272392823F00908EF0 /* ExistingAccount_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistingAccount_ViewController.swift; sourceTree = "<group>"; };
 		55C587FC238FC36F00A6DC85 /* OneBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,9 +172,9 @@
 		55C58813238FC3D200A6DC85 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5525BDF82393340300632750 /* InitialAccountViewController.swift */,
 				5525BDF42392FAAC00632750 /* AccountViewController.swift */,
 				55C58803238FC36F00A6DC85 /* ViewController.swift */,
-				557EA79A23922E76000AD213 /* InitialAccount_ViewController.swift */,
 				5522CC5B23925613008DC260 /* CreateAccount_ViewController.swift */,
 				55A712252392822D00908EF0 /* SelectBank_ViewController.swift */,
 				55A712272392823F00908EF0 /* ExistingAccount_ViewController.swift */,
@@ -382,6 +383,7 @@
 				77DEEF54239246F2001A808F /* ServicesCollectionViewCell.swift in Sources */,
 				55D8BA022392BDD6008E7371 /* CloseAccountViewController.swift in Sources */,
 				77BBCAB523920E8600F5605E /* DashboadViewController.swift in Sources */,
+				5525BDF92393340300632750 /* InitialAccountViewController.swift in Sources */,
 				55C58804238FC36F00A6DC85 /* ViewController.swift in Sources */,
 				5525BDF72392FCA600632750 /* AccountsCardCollectionViewCell.swift in Sources */,
 				77DEEF592392567F001A808F /* LoginViewController.swift in Sources */,

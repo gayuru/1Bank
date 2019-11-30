@@ -398,7 +398,7 @@
         <!--Initial Account View Controller-->
         <scene sceneID="Bhr-CX-XAr">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Qdk-Sz-a1R" customClass="InitialAccount_ViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Qdk-Sz-a1R" customClass="InitialAccountViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="42C-sH-cNx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -512,7 +512,7 @@
                         <viewLayoutGuide key="safeArea" id="2Rm-v6-63Z"/>
                     </view>
                     <connections>
-                        <outlet property="existingBankBtn" destination="aGv-7P-10V" id="6r1-ew-3KP"/>
+                        <outlet property="existingBankBtn" destination="aGv-7P-10V" id="dj2-Ec-MK3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38G-4u-72t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -703,6 +703,6 @@
         <image name="westpac_deco" width="512" height="713"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U7f-18-VVC"/>
+        <segue reference="KBF-Jl-7UZ"/>
     </inferredMetricsTieBreakers>
 </document>

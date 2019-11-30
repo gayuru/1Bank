@@ -109,7 +109,7 @@
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfr-dX-iO5" customClass="GradientButton" customModule="OneBank" customModuleProvider="target">
                                                             <rect key="frame" x="99" y="8" width="57" height="107"/>
-                                                            <color key="backgroundColor" cyan="0.0024171189870685339" magenta="0.39911179729254848" yellow="0.12097030878067017" black="0.00056782842148095369" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                            <color key="backgroundColor" red="0.72161704301834106" green="0.76580506563186646" blue="0.9343535304069519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="107" id="A1n-Vo-Vql"/>
                                                                 <constraint firstAttribute="width" constant="57" id="qat-DT-1HJ"/>
@@ -177,30 +177,41 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2g2-EL-Xzg" customClass="GradientButton" customModule="OneBank" customModuleProvider="target">
-                                                    <rect key="frame" x="17" y="14" width="58" height="60"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2g2-EL-Xzg" customClass="GradientButton" customModule="OneBank" customModuleProvider="target">
+                                                    <rect key="frame" x="17" y="13" width="59" height="61"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotify" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-xe-hyu">
+                                                            <rect key="frame" x="12" y="10" width="35" height="41"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="41" id="UHj-RT-q7i"/>
+                                                                <constraint firstAttribute="width" constant="35" id="ivP-Ct-Nvq"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="0.8784313725490196" green="0.92549019607843142" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="eGC-xe-hyu" firstAttribute="centerX" secondItem="2g2-EL-Xzg" secondAttribute="centerX" id="NNf-mZ-CBE"/>
+                                                        <constraint firstItem="eGC-xe-hyu" firstAttribute="top" secondItem="2g2-EL-Xzg" secondAttribute="top" constant="10" id="h8W-lh-Pjl"/>
+                                                        <constraint firstItem="eGC-xe-hyu" firstAttribute="centerY" secondItem="2g2-EL-Xzg" secondAttribute="centerY" id="lBH-Mu-lC4"/>
+                                                        <constraint firstItem="eGC-xe-hyu" firstAttribute="leading" secondItem="2g2-EL-Xzg" secondAttribute="leading" constant="12" id="x4U-rX-h4s"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="16"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spotify" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-xe-hyu">
-                                                    <rect key="frame" x="20" y="14" width="51" height="60"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spotify" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gii-5P-ovh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spotify" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gii-5P-ovh">
                                                     <rect key="frame" x="95" y="20" width="181" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="181" id="r1r-2f-kAo"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpP-8u-U0u">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpP-8u-U0u">
                                                     <rect key="frame" x="95" y="44" width="185" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                     <color key="textColor" red="0.61176470588235299" green="0.61176470588235299" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -224,11 +235,18 @@
                                             <color key="backgroundColor" red="0.9766412377" green="0.98401635890000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="z04-iv-Xlq" secondAttribute="trailing" constant="32" id="H2G-lf-jhM"/>
+                                                <constraint firstItem="2g2-EL-Xzg" firstAttribute="bottom" secondItem="Nmg-fV-wGn" secondAttribute="bottomMargin" id="Kz8-Mu-CMe"/>
+                                                <constraint firstItem="gii-5P-ovh" firstAttribute="baseline" secondItem="ZSK-0d-MHd" secondAttribute="baseline" id="QEM-Mt-81q"/>
+                                                <constraint firstItem="gii-5P-ovh" firstAttribute="leading" secondItem="2g2-EL-Xzg" secondAttribute="trailing" constant="20" id="V1S-vi-Il6"/>
                                                 <constraint firstItem="ZSK-0d-MHd" firstAttribute="top" secondItem="Nmg-fV-wGn" secondAttribute="top" constant="27" id="a3y-LP-Xdp"/>
                                                 <constraint firstItem="z04-iv-Xlq" firstAttribute="top" secondItem="Nmg-fV-wGn" secondAttribute="top" constant="33" id="dKR-Xl-t2L"/>
                                                 <constraint firstAttribute="bottom" secondItem="ZSK-0d-MHd" secondAttribute="bottom" constant="44" id="fNt-vu-CUB"/>
+                                                <constraint firstItem="JpP-8u-U0u" firstAttribute="top" secondItem="gii-5P-ovh" secondAttribute="bottom" constant="3" id="lj0-Nx-h1Y"/>
+                                                <constraint firstItem="gii-5P-ovh" firstAttribute="leading" secondItem="JpP-8u-U0u" secondAttribute="leading" id="rVE-X7-fgJ"/>
                                                 <constraint firstItem="z04-iv-Xlq" firstAttribute="leading" secondItem="ZSK-0d-MHd" secondAttribute="trailing" constant="4" id="vEg-YK-0SC"/>
                                                 <constraint firstAttribute="bottom" secondItem="z04-iv-Xlq" secondAttribute="bottom" constant="51" id="vc5-xi-FaC"/>
+                                                <constraint firstItem="gii-5P-ovh" firstAttribute="top" secondItem="Nmg-fV-wGn" secondAttribute="topMargin" constant="9" id="xvl-ev-74t"/>
+                                                <constraint firstItem="2g2-EL-Xzg" firstAttribute="leading" secondItem="Nmg-fV-wGn" secondAttribute="leadingMargin" constant="-3" id="y3g-e1-wuu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -524,11 +542,22 @@
                         <outlet property="transactionsTableView" destination="w7N-Tw-z74" id="N6Q-AJ-WN9"/>
                         <outlet property="usernameLabel" destination="pRp-YT-CkY" id="XaW-fu-NEa"/>
                         <segue destination="jFC-uA-BKk" kind="show" identifier="goToAccount" id="dHX-Hf-6eq"/>
+                        <segue destination="kSZ-hb-PfT" kind="showDetail" identifier="openBank" id="iLO-3k-ajK"/>
+                        <segue destination="XjX-Sz-fd5" kind="showDetail" identifier="transferMoney" id="Mo1-mq-epk"/>
+                        <segue destination="VeZ-mu-D7I" kind="showDetail" identifier="closeBank" id="zpU-6e-ltR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKE-wM-vJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="118.84057971014494" y="125.89285714285714"/>
+        </scene>
+        <!--CloseBankAccount-->
+        <scene sceneID="hXC-uV-ygl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CloseBankAccount" id="VeZ-mu-D7I" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0V-BM-Ks3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="62"/>
         </scene>
         <!--Accounts-->
         <scene sceneID="LH6-No-DlV">
@@ -538,7 +567,23 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqb-zO-OBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717" y="139"/>
+            <point key="canvasLocation" x="779" y="126"/>
+        </scene>
+        <!--Transfer-->
+        <scene sceneID="2dW-mu-dVK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Transfer" id="XjX-Sz-fd5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OI4-eg-6ec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="-14"/>
+        </scene>
+        <!--InitialAccount-->
+        <scene sceneID="hjv-CI-qrV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InitialAccount" id="kSZ-hb-PfT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Gn-rG-nvn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="-58"/>
         </scene>
     </scenes>
     <resources>

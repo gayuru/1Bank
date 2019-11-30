@@ -10,7 +10,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
  
-    private let model = RestRequest.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
