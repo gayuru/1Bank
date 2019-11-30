@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		55C58807238FC36F00A6DC85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C58805238FC36F00A6DC85 /* Main.storyboard */; };
 		55C58809238FC37100A6DC85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C58808238FC37100A6DC85 /* Assets.xcassets */; };
 		55C5880C238FC37100A6DC85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5880A238FC37100A6DC85 /* LaunchScreen.storyboard */; };
+		7718B7D02391F6500004BFA4 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7718B7CF2391F6500004BFA4 /* Dashboard.storyboard */; };
 		E602DA63F9F648FB8C7169D4 /* Pods_OneBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C5B6FB31C1C0F7625ED260 /* Pods_OneBank.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		55C58808238FC37100A6DC85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55C5880B238FC37100A6DC85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55C5880D238FC37100A6DC85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7718B7CF2391F6500004BFA4 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		B42CF4AAFB6C5C4F7DCE17EA /* Pods-OneBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBank.debug.xcconfig"; path = "Target Support Files/Pods-OneBank/Pods-OneBank.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1E0175D9ECAF7B8E0ABF5C /* Pods-OneBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBank.release.xcconfig"; path = "Target Support Files/Pods-OneBank/Pods-OneBank.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 			children = (
 				55C58805238FC36F00A6DC85 /* Main.storyboard */,
 				55C5880A238FC37100A6DC85 /* LaunchScreen.storyboard */,
+				7718B7CF2391F6500004BFA4 /* Dashboard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,7 +115,6 @@
 				B42CF4AAFB6C5C4F7DCE17EA /* Pods-OneBank.debug.xcconfig */,
 				EF1E0175D9ECAF7B8E0ABF5C /* Pods-OneBank.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -176,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7718B7D02391F6500004BFA4 /* Dashboard.storyboard in Resources */,
 				55C5880C238FC37100A6DC85 /* LaunchScreen.storyboard in Resources */,
 				55C58809238FC37100A6DC85 /* Assets.xcassets in Resources */,
 				55C58807238FC36F00A6DC85 /* Main.storyboard in Resources */,
@@ -388,7 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iSwift.OneBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -407,7 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iSwift.OneBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
