@@ -13,9 +13,11 @@ class DashboadViewController: UIViewController {
     @IBOutlet weak var setttingsView: UIView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+
     @IBOutlet weak var cardCollectionView: UICollectionView!
     @IBOutlet weak var servicesCollectionView: UICollectionView!
     @IBOutlet weak var transactionsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
@@ -55,27 +57,69 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
         if collectionView == cardCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as! CardCollectionViewCell
             cell.balanceLabel.textColor = .black
-            cell.balanceLabel.text = "$100.00"
-            if indexPath.row  == 0{
-                let radius: CGFloat = 10
-                cell.layer.cornerRadius = radius
+            
+            let radius: CGFloat = 10
+            cell.layer.cornerRadius = radius
+            switch indexPath.row {
+            case 0:
                 cell.layer.shadowColor = UIColor.init(red: 189, green: 208, blue: 240).cgColor
                 cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
                 cell.layer.shadowRadius = 3.0
                 cell.layer.shadowOpacity = 0.5
                 // Never mask the shadow as it falls outside the view
+                cell.balanceLabel.text = ""
+                cell.balanceType.text = ""
                 cell.layer.masksToBounds = false
                 cell.cardTypeImage.image = UIImage(named: "")
                 cell.bankImage.image = UIImage(named: "")
                 cell.balanceLabel.numberOfLines = 1
                 cell.frame.origin.y = 40
+                break;
+            case 1:
+                cell.totalBalance.text = ""
+               cell.totalBalanceLabel.text = ""
+               cell.balanceLabel.text = "$1279.00"
+               cell.balanceLabel.textColor = UIColor.white
+               cell.logo.image = UIImage(named: "")
+               cell.contentView.backgroundColor = UIColor(red:1.00, green:0.80, blue:0.00, alpha:1.0)
+                break;
+            case 2:
+             cell.totalBalance.text = ""
+            cell.totalBalanceLabel.text = ""
+            cell.balanceLabel.text = "$4579.00"
+            cell.balanceLabel.textColor = UIColor.white
+            cell.logo.image = UIImage(named: "")
+            cell.contentView.backgroundColor = UIColor(red:0.58, green:0.80, blue:1.00, alpha:1.0)
+             break;
+                
+            case 3:
+             cell.totalBalance.text = ""
+            cell.totalBalanceLabel.text = ""
+            cell.balanceLabel.text = "$6000.00"
+            cell.balanceLabel.textColor = UIColor.white
+            cell.logo.image = UIImage(named: "")
+            cell.contentView.backgroundColor = UIColor(red:0.75, green:0.05, blue:0.00, alpha:1.0)
+             break;
+            case 4:
+             cell.totalBalance.text = ""
+            cell.totalBalanceLabel.text = ""
+            cell.balanceLabel.text = "$721.00"
+            cell.balanceLabel.textColor = UIColor.white
+            cell.logo.image = UIImage(named: "")
+            cell.contentView.backgroundColor = UIColor(red:1.00, green:0.30, blue:0.44, alpha:1.0)
+             break;
+            default:
+                break;
+                
             }
+        
             
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "servicesCell", for: indexPath) as! ServicesCollectionViewCell
             cell.servicesView.backgroundColor = UIColor(red: 224, green: 236, blue: 255)
             cell.layer.cornerRadius = 10
+            
             return cell
         }
     }
