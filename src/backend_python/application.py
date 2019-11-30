@@ -45,7 +45,7 @@ class Transaction(db.Model):
   __tablename__='transactions'
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(200))
-  icon = db.Column(db.String(200))
+  icon = db.Column(db.String(1000))
   date = db.Column(db.Date)
   amount = db.Column(db.Float)
   bank_account_id = db.Column(db.Integer, db.ForeignKey('bank_accounts.id'), nullable = False)
@@ -138,12 +138,63 @@ def addSampleData():
 
   # Transactions
   transactions = [
+    # Peter - 1st account
+    Transaction(name='Spotify Ltd.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjuoqChmZLmAhVSyDgGHbPkBZMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.spotify.com%2F&psig=AOvVaw2lA03VuvLHGOSHZdMPn8-s&ust=1575212305580875', date='2019-01-01', amount=-5.00, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='McDonalds Bourke St.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjT2KPlm5LmAhU9zzgGHfuoClsQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMcDonald%2527s&psig=AOvVaw2_dX5VKst1lR1HxfJj3bZS&ust=1575212983926499', date='2019-01-01', amount= -50.49, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Starbucks Spencer Mall', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwii-NDNnJLmAhUgxzgGHZEXAUIQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.stickpng.com%2Fimg%2Ficons-logos-emojis%2Ficonic-brands%2Fstarbucks-logo&psig=AOvVaw0jY0CPjjovvbm4DpTjx4e7&ust=1575213193222643', date='2019-01-03', amount=-7.5, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Amazon AU Sydney', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjSts6PnZLmAhWjzjgGHecTCUwQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F1298723%2Famazon_icon&psig=AOvVaw0jFGclV-prggRr8FYVOBf2&ust=1575213341548464', date='2019-01-11', amount=-150.49, bank_account_id=1, transaction_group_id=6),
+    Transaction(name='Withdrawal ATM CBA ATM', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwijzsqunZLmAhW1zDgGHcH3A2UQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.commbank.com.au%2F&psig=AOvVaw1l0OQ-RToTOtPDJDcIVIxu&ust=1575213406160310', date='2019-01-15', amount=-50, bank_account_id=1, transaction_group_id=10),
+    Transaction(name='Liza Hot Springs', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjwmu3anZLmAhUtwzgGHQjkBJsQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F887037%2Fcash_cash_flow_dollars_money_icon&psig=AOvVaw1zapOJydiUSLC1jFr5wpGM&ust=1575213490236989', date='2019-01-18', amount=250, bank_account_id=1, transaction_group_id=10),
+    Transaction(name='Jetts Fitness Aus Card', icon='http://vlcl.com.au/wp-content/uploads/2017/03/1389_12508888_1070540622976287_9031922848091024375_n.jpg', date='2019-01-20', amount=-27.5, bank_account_id=1, transaction_group_id=7),
+    Transaction(name='McDonalds Bourke St.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjT2KPlm5LmAhU9zzgGHfuoClsQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMcDonald%2527s&psig=AOvVaw2_dX5VKst1lR1HxfJj3bZS&ust=1575212983926499', date='2019-01-22', amount= -42.4, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Spotify Ltd.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjuoqChmZLmAhVSyDgGHbPkBZMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.spotify.com%2F&psig=AOvVaw2lA03VuvLHGOSHZdMPn8-s&ust=1575212305580875', date='2019-01-22', amount=-5.00, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='Amazon AU Sydney', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjSts6PnZLmAhWjzjgGHecTCUwQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F1298723%2Famazon_icon&psig=AOvVaw0jFGclV-prggRr8FYVOBf2&ust=1575213341548464', date='2019-01-23', amount=-100.99, bank_account_id=1, transaction_group_id=6),
+    Transaction(name='Public Bar Pty Ltd Docklands', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjkrbHRnpLmAhUVzzgGHY8xA1cQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F4018538%2Fcocktail_drinks_icon&psig=AOvVaw1ZWLStD9wIxC6S232LSmlo&ust=1575213747368138', date='2019-01-25', amount=-10, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='Withdrawal ATM CBA ATM', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwijzsqunZLmAhW1zDgGHcH3A2UQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.commbank.com.au%2F&psig=AOvVaw1l0OQ-RToTOtPDJDcIVIxu&ust=1575213406160310', date='2019-01-15', amount=-50, bank_account_id=1, transaction_group_id=10),    # Peter - 1st account
 
+    Transaction(name='Spotify Ltd.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjuoqChmZLmAhVSyDgGHbPkBZMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.spotify.com%2F&psig=AOvVaw2lA03VuvLHGOSHZdMPn8-s&ust=1575212305580875', date='2019-01-01', amount=-5.00, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='McDonalds Bourke St.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjT2KPlm5LmAhU9zzgGHfuoClsQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMcDonald%2527s&psig=AOvVaw2_dX5VKst1lR1HxfJj3bZS&ust=1575212983926499', date='2019-01-01', amount= -50.49, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Starbucks Spencer Mall', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwii-NDNnJLmAhUgxzgGHZEXAUIQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.stickpng.com%2Fimg%2Ficons-logos-emojis%2Ficonic-brands%2Fstarbucks-logo&psig=AOvVaw0jY0CPjjovvbm4DpTjx4e7&ust=1575213193222643', date='2019-01-03', amount=-7.5, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Amazon AU Sydney', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjSts6PnZLmAhWjzjgGHecTCUwQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F1298723%2Famazon_icon&psig=AOvVaw0jFGclV-prggRr8FYVOBf2&ust=1575213341548464', date='2019-01-11', amount=-150.49, bank_account_id=1, transaction_group_id=6),
+    Transaction(name='Withdrawal ATM CBA ATM', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwijzsqunZLmAhW1zDgGHcH3A2UQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.commbank.com.au%2F&psig=AOvVaw1l0OQ-RToTOtPDJDcIVIxu&ust=1575213406160310', date='2019-01-15', amount=-50, bank_account_id=1, transaction_group_id=10),
+    Transaction(name='Liza Hot Springs', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjwmu3anZLmAhUtwzgGHQjkBJsQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F887037%2Fcash_cash_flow_dollars_money_icon&psig=AOvVaw1zapOJydiUSLC1jFr5wpGM&ust=1575213490236989', date='2019-01-18', amount=250, bank_account_id=1, transaction_group_id=10),
+    Transaction(name='Jetts Fitness Aus Card', icon='http://vlcl.com.au/wp-content/uploads/2017/03/1389_12508888_1070540622976287_9031922848091024375_n.jpg', date='2019-01-20', amount=-27.5, bank_account_id=1, transaction_group_id=7),
+    Transaction(name='McDonalds Bourke St.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjT2KPlm5LmAhU9zzgGHfuoClsQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMcDonald%2527s&psig=AOvVaw2_dX5VKst1lR1HxfJj3bZS&ust=1575212983926499', date='2019-01-22', amount= -42.4, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Spotify Ltd.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjuoqChmZLmAhVSyDgGHbPkBZMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.spotify.com%2F&psig=AOvVaw2lA03VuvLHGOSHZdMPn8-s&ust=1575212305580875', date='2019-01-22', amount=-5.00, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='Amazon AU Sydney', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjSts6PnZLmAhWjzjgGHecTCUwQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F1298723%2Famazon_icon&psig=AOvVaw0jFGclV-prggRr8FYVOBf2&ust=1575213341548464', date='2019-01-23', amount=-100.99, bank_account_id=1, transaction_group_id=6),
+    Transaction(name='Public Bar Pty Ltd Docklands', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjkrbHRnpLmAhUVzzgGHY8xA1cQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F4018538%2Fcocktail_drinks_icon&psig=AOvVaw1ZWLStD9wIxC6S232LSmlo&ust=1575213747368138', date='2019-01-25', amount=-10, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='Withdrawal ATM CBA ATM', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwijzsqunZLmAhW1zDgGHcH3A2UQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.commbank.com.au%2F&psig=AOvVaw1l0OQ-RToTOtPDJDcIVIxu&ust=1575213406160310', date='2019-01-15', amount=-50, bank_account_id=1, transaction_group_id=10),    # Peter - 1st account
+
+    Transaction(name='Spotify Ltd.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjuoqChmZLmAhVSyDgGHbPkBZMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.spotify.com%2F&psig=AOvVaw2lA03VuvLHGOSHZdMPn8-s&ust=1575212305580875', date='2019-01-01', amount=-5.00, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='McDonalds Bourke St.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjT2KPlm5LmAhU9zzgGHfuoClsQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMcDonald%2527s&psig=AOvVaw2_dX5VKst1lR1HxfJj3bZS&ust=1575212983926499', date='2019-01-01', amount= -50.49, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Starbucks Spencer Mall', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwii-NDNnJLmAhUgxzgGHZEXAUIQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.stickpng.com%2Fimg%2Ficons-logos-emojis%2Ficonic-brands%2Fstarbucks-logo&psig=AOvVaw0jY0CPjjovvbm4DpTjx4e7&ust=1575213193222643', date='2019-01-03', amount=-7.5, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Amazon AU Sydney', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjSts6PnZLmAhWjzjgGHecTCUwQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F1298723%2Famazon_icon&psig=AOvVaw0jFGclV-prggRr8FYVOBf2&ust=1575213341548464', date='2019-01-11', amount=-150.49, bank_account_id=1, transaction_group_id=6),
+    Transaction(name='Withdrawal ATM CBA ATM', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwijzsqunZLmAhW1zDgGHcH3A2UQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.commbank.com.au%2F&psig=AOvVaw1l0OQ-RToTOtPDJDcIVIxu&ust=1575213406160310', date='2019-01-15', amount=-50, bank_account_id=1, transaction_group_id=10),
+    Transaction(name='Liza Hot Springs', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjwmu3anZLmAhUtwzgGHQjkBJsQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F887037%2Fcash_cash_flow_dollars_money_icon&psig=AOvVaw1zapOJydiUSLC1jFr5wpGM&ust=1575213490236989', date='2019-01-18', amount=250, bank_account_id=1, transaction_group_id=10),
+    Transaction(name='Jetts Fitness Aus Card', icon='http://vlcl.com.au/wp-content/uploads/2017/03/1389_12508888_1070540622976287_9031922848091024375_n.jpg', date='2019-01-20', amount=-27.5, bank_account_id=1, transaction_group_id=7),
+    Transaction(name='McDonalds Bourke St.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjT2KPlm5LmAhU9zzgGHfuoClsQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMcDonald%2527s&psig=AOvVaw2_dX5VKst1lR1HxfJj3bZS&ust=1575212983926499', date='2019-01-22', amount= -42.4, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Spotify Ltd.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjuoqChmZLmAhVSyDgGHbPkBZMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.spotify.com%2F&psig=AOvVaw2lA03VuvLHGOSHZdMPn8-s&ust=1575212305580875', date='2019-01-22', amount=-5.00, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='Amazon AU Sydney', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjSts6PnZLmAhWjzjgGHecTCUwQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F1298723%2Famazon_icon&psig=AOvVaw0jFGclV-prggRr8FYVOBf2&ust=1575213341548464', date='2019-01-23', amount=-100.99, bank_account_id=1, transaction_group_id=6),
+    Transaction(name='Public Bar Pty Ltd Docklands', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjkrbHRnpLmAhUVzzgGHY8xA1cQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F4018538%2Fcocktail_drinks_icon&psig=AOvVaw1ZWLStD9wIxC6S232LSmlo&ust=1575213747368138', date='2019-01-25', amount=-10, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='Withdrawal ATM CBA ATM', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwijzsqunZLmAhW1zDgGHcH3A2UQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.commbank.com.au%2F&psig=AOvVaw1l0OQ-RToTOtPDJDcIVIxu&ust=1575213406160310', date='2019-01-15', amount=-50, bank_account_id=1, transaction_group_id=10),    # Peter - 1st account
+
+    Transaction(name='Spotify Ltd.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjuoqChmZLmAhVSyDgGHbPkBZMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.spotify.com%2F&psig=AOvVaw2lA03VuvLHGOSHZdMPn8-s&ust=1575212305580875', date='2019-01-01', amount=-5.00, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='McDonalds Bourke St.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjT2KPlm5LmAhU9zzgGHfuoClsQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMcDonald%2527s&psig=AOvVaw2_dX5VKst1lR1HxfJj3bZS&ust=1575212983926499', date='2019-01-01', amount= -50.49, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Starbucks Spencer Mall', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwii-NDNnJLmAhUgxzgGHZEXAUIQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.stickpng.com%2Fimg%2Ficons-logos-emojis%2Ficonic-brands%2Fstarbucks-logo&psig=AOvVaw0jY0CPjjovvbm4DpTjx4e7&ust=1575213193222643', date='2019-01-03', amount=-7.5, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Amazon AU Sydney', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjSts6PnZLmAhWjzjgGHecTCUwQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F1298723%2Famazon_icon&psig=AOvVaw0jFGclV-prggRr8FYVOBf2&ust=1575213341548464', date='2019-01-11', amount=-150.49, bank_account_id=1, transaction_group_id=6),
+    Transaction(name='Withdrawal ATM CBA ATM', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwijzsqunZLmAhW1zDgGHcH3A2UQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.commbank.com.au%2F&psig=AOvVaw1l0OQ-RToTOtPDJDcIVIxu&ust=1575213406160310', date='2019-01-15', amount=-50, bank_account_id=1, transaction_group_id=10),
+    Transaction(name='Liza Hot Springs', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjwmu3anZLmAhUtwzgGHQjkBJsQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F887037%2Fcash_cash_flow_dollars_money_icon&psig=AOvVaw1zapOJydiUSLC1jFr5wpGM&ust=1575213490236989', date='2019-01-18', amount=250, bank_account_id=1, transaction_group_id=10),
+    Transaction(name='Jetts Fitness Aus Card', icon='http://vlcl.com.au/wp-content/uploads/2017/03/1389_12508888_1070540622976287_9031922848091024375_n.jpg', date='2019-01-20', amount=-27.5, bank_account_id=1, transaction_group_id=7),
+    Transaction(name='McDonalds Bourke St.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjT2KPlm5LmAhU9zzgGHfuoClsQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMcDonald%2527s&psig=AOvVaw2_dX5VKst1lR1HxfJj3bZS&ust=1575212983926499', date='2019-01-22', amount= -42.4, bank_account_id=1, transaction_group_id=5),
+    Transaction(name='Spotify Ltd.', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjuoqChmZLmAhVSyDgGHbPkBZMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.spotify.com%2F&psig=AOvVaw2lA03VuvLHGOSHZdMPn8-s&ust=1575212305580875', date='2019-01-22', amount=-5.00, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='Amazon AU Sydney', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjSts6PnZLmAhWjzjgGHecTCUwQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F1298723%2Famazon_icon&psig=AOvVaw0jFGclV-prggRr8FYVOBf2&ust=1575213341548464', date='2019-01-23', amount=-100.99, bank_account_id=1, transaction_group_id=6),
+    Transaction(name='Public Bar Pty Ltd Docklands', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjkrbHRnpLmAhUVzzgGHY8xA1cQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F4018538%2Fcocktail_drinks_icon&psig=AOvVaw1ZWLStD9wIxC6S232LSmlo&ust=1575213747368138', date='2019-01-25', amount=-10, bank_account_id=1, transaction_group_id=9),
+    Transaction(name='Withdrawal ATM CBA ATM', icon='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwijzsqunZLmAhW1zDgGHcH3A2UQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.commbank.com.au%2F&psig=AOvVaw1l0OQ-RToTOtPDJDcIVIxu&ust=1575213406160310', date='2019-01-15', amount=-50, bank_account_id=1, transaction_group_id=10),
   ]
 
   # Cards
 
-  all = [(transactionGroups, transaction_group_schema), (users, user_schema), (bankAccounts, bank_account_schema)]
+  all = [(transactionGroups, transaction_group_schema), (users, user_schema), (bankAccounts, bank_account_schema), (transactions, transaction_schema)]
 
   for model in all:
     for entry in model[0]:
@@ -151,9 +202,11 @@ def addSampleData():
       db.session.commit()
       model[1].dump(entry)
 
+  print("Finished adding data...")
+
 print("db created", flush=True)
 
-addSampleData()
+
 
 
 @application.route('/')
@@ -235,10 +288,14 @@ def transactions_accid_get(accId):
 @application.route('/transactions', methods=['POST', 'GET'])
 def transactions():
   if request.method == 'POST':
+    name = request.form['name']
+    icon = request.form['icon']
     date = request.form['date']
     amount = request.form['amount']
     bankAccountId = int(request.form['bankAccountId'])
-    transaction = Transaction(date=date, amount=amount, bank_account_id=bankAccountId)
+    transactionGroupId = int(request.form['transactionGroupId'])
+
+    transaction = Transaction(date=date, amount=amount, bank_account_id=bankAccountId, transaction_group_id=transactionGroupId)
     db.session.add(transaction)
     db.session.commit()
     transaction_schema.dump(transaction)
@@ -254,4 +311,5 @@ def transaction_get(transId):
   return transaction_schema.jsonify(transaction)
 
 if __name__ == '__main__':
-  application.run()
+  addSampleData()
+  application.run(use_reloader=False)
