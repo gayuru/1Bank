@@ -9,11 +9,14 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+ 
+    private let model = RestRequest.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let userTappedOtherThanKeyboard: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector(("closeKeyboard")))
         view.addGestureRecognizer(userTappedOtherThanKeyboard)
+        
         // Do any additional setup after loading the view.
     }
     

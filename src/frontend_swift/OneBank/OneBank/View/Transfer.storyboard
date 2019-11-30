@@ -128,7 +128,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="combank_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="sfN-6w-PH2">
-                                        <rect key="frame" x="17" y="15" width="36" height="33.000000000000455"/>
+                                        <rect key="frame" x="17" y="15" width="36" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="69K-zs-snz"/>
                                             <constraint firstAttribute="width" constant="36" id="Jnt-7B-5CY"/>
@@ -175,7 +175,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nab_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="trO-xk-4T9">
-                                        <rect key="frame" x="15" y="14" width="36" height="33.000000000000057"/>
+                                        <rect key="frame" x="15" y="14" width="36" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="2CP-rN-F5w"/>
                                             <constraint firstAttribute="width" constant="36" id="YdE-Jy-nQG"/>
@@ -252,13 +252,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send money to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs6-V6-cCG">
-                                <rect key="frame" x="46" y="580" width="179.5" height="33"/>
+                                <rect key="frame" x="46" y="580" width="184" height="31.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="27"/>
                                 <color key="textColor" red="0.2564237714" green="0.29105240110000002" blue="0.81180900339999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Cx-OZ-JvP">
-                                <rect key="frame" x="46" y="719" width="60" height="21"/>
+                                <rect key="frame" x="46" y="717.5" width="60" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="GuB-dA-zdt"/>
                                     <constraint firstAttribute="width" constant="60" id="TMv-Gs-eCY"/>
@@ -276,7 +276,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$100" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cB-E2-OOC">
-                                <rect key="frame" x="46" y="749" width="188" height="38"/>
+                                <rect key="frame" x="46" y="747.5" width="188" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="188" id="WA9-VX-G8G"/>
                                     <constraint firstAttribute="height" constant="38" id="Xsa-ES-BY1"/>
@@ -286,7 +286,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usV-vV-ZSx">
-                                <rect key="frame" x="46" y="629" width="54" height="63"/>
+                                <rect key="frame" x="46" y="627.5" width="54" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="Udb-wg-btF"/>
                                     <constraint firstAttribute="width" constant="54" id="nTJ-Ty-Guw"/>
@@ -294,7 +294,7 @@
                                 <state key="normal" backgroundImage="aiony-haust-3TLl_97HNJo-unsplash"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qo-dQ-mWS">
-                                <rect key="frame" x="117" y="629" width="55" height="63"/>
+                                <rect key="frame" x="117" y="627.5" width="55" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="WxY-3q-XOg"/>
                                     <constraint firstAttribute="height" constant="63" id="lpK-54-lA8"/>
@@ -302,7 +302,7 @@
                                 <state key="normal" backgroundImage="azamat-zhanisov-a5sRFieA3BY-unsplash"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPG-w3-6cJ">
-                                <rect key="frame" x="188" y="629" width="55" height="63"/>
+                                <rect key="frame" x="188" y="627.5" width="55" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="Jhw-Aa-xHr"/>
                                     <constraint firstAttribute="height" constant="63" id="d6l-Oo-dn4"/>

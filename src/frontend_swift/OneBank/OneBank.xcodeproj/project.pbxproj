@@ -10,6 +10,9 @@
 		5522CC5A23923BF8008DC260 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CC5923923BF8008DC260 /* GradientButton.swift */; };
 		5522CC5C23925613008DC260 /* CreateAccount_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522CC5B23925613008DC260 /* CreateAccount_ViewController.swift */; };
 		5525BDEB2392D63100632750 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525BDEA2392D63100632750 /* TransferViewController.swift */; };
+		5525BDED2392E0A000632750 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525BDEC2392E0A000632750 /* User.swift */; };
+		5525BDEF2392E0BE00632750 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525BDEE2392E0BE00632750 /* BankAccount.swift */; };
+		5525BDF12392E0ED00632750 /* RestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525BDF02392E0ED00632750 /* RestRequest.swift */; };
 		5547C90823920C5100FFD5A4 /* Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90323920C5100FFD5A4 /* Proxima Nova Black.otf */; };
 		5547C90923920C5100FFD5A4 /* Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90423920C5100FFD5A4 /* Proxima Nova Thin.otf */; };
 		5547C90A23920C5100FFD5A4 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90523920C5100FFD5A4 /* ProximaNova-Regular.otf */; };
@@ -45,6 +48,9 @@
 		5522CC5923923BF8008DC260 /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		5522CC5B23925613008DC260 /* CreateAccount_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount_ViewController.swift; sourceTree = "<group>"; };
 		5525BDEA2392D63100632750 /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
+		5525BDEC2392E0A000632750 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5525BDEE2392E0BE00632750 /* BankAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccount.swift; sourceTree = "<group>"; };
+		5525BDF02392E0ED00632750 /* RestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequest.swift; sourceTree = "<group>"; };
 		5547C90323920C5100FFD5A4 /* Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Black.otf"; path = "OneBank/Assets.xcassets/Proxima Nova Black.otf"; sourceTree = SOURCE_ROOT; };
 		5547C90423920C5100FFD5A4 /* Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Thin.otf"; path = "OneBank/Assets.xcassets/Proxima Nova Thin.otf"; sourceTree = SOURCE_ROOT; };
 		5547C90523920C5100FFD5A4 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "OneBank/Assets.xcassets/ProximaNova-Regular.otf"; sourceTree = SOURCE_ROOT; };
@@ -172,6 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				55D8B9FD2392B25F008E7371 /* Globals.swift */,
+				5525BDEC2392E0A000632750 /* User.swift */,
+				5525BDEE2392E0BE00632750 /* BankAccount.swift */,
+				5525BDF02392E0ED00632750 /* RestRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,9 +352,12 @@
 				77DEEF57239254BE001A808F /* InitialAccount_ViewController.swift in Sources */,
 				55C58804238FC36F00A6DC85 /* ViewController.swift in Sources */,
 				77DEEF592392567F001A808F /* LoginViewController.swift in Sources */,
+				5525BDF12392E0ED00632750 /* RestRequest.swift in Sources */,
 				55C58800238FC36F00A6DC85 /* AppDelegate.swift in Sources */,
 				55A712282392823F00908EF0 /* ExistingAccount_ViewController.swift in Sources */,
 				77BBCAB82392243400F5605E /* CardCollectionViewCell.swift in Sources */,
+				5525BDED2392E0A000632750 /* User.swift in Sources */,
+				5525BDEF2392E0BE00632750 /* BankAccount.swift in Sources */,
 				5525BDEB2392D63100632750 /* TransferViewController.swift in Sources */,
 				55D8B9FE2392B25F008E7371 /* Globals.swift in Sources */,
 				55C58802238FC36F00A6DC85 /* SceneDelegate.swift in Sources */,
@@ -495,7 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OneBank/OneBank.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6XNC2755U2;
+				DEVELOPMENT_TEAM = 56CT9TQ9TD;
 				INFOPLIST_FILE = OneBank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -515,7 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OneBank/OneBank.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6XNC2755U2;
+				DEVELOPMENT_TEAM = 56CT9TQ9TD;
 				INFOPLIST_FILE = OneBank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
