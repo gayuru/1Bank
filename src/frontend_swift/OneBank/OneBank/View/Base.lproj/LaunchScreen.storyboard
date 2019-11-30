@@ -15,7 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundSplash" translatesAutoresizingMaskIntoConstraints="NO" id="ykY-sz-jhh">
                                 <rect key="frame" x="-30" y="-10" width="473" height="916"/>
                                 <constraints>
