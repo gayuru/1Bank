@@ -86,8 +86,19 @@ def accounts_get():
     tasks= BankAccount.query.all()
     return tasks
 
+#liza
+@application.route('/users/:userId', methods=['GET'])
+def user_get():
+  if request.method == 'GET':
+    tasks = User.query.filter_by(request.body.id).first()
+    return tasks
 
-
+#liza
+@application.route('/users/:userId/accounts', methods=['GET'])
+def user_accounts_get():
+  if request.method == 'GET':
+    tasks= BankAccount.queryfilter_by(request.body.id).all
+    return tasks
 
 if __name__ == '__main__':
   application.run()
