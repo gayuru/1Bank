@@ -7,6 +7,7 @@ application = Flask(__name__)
 
 application.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False # silence the deprecation warning
+application.debug = True
 
 db = SQLAlchemy(application)
 
@@ -26,19 +27,19 @@ class BankAccount(db.Model):
   bankName = db.Column(db.String(200), unique=False, nullable=True)
 
   user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-  cards = db.relationship('Card', backref='bankAccount', lazy = True)
-  transactions = db.relationship('Transaction', backref='bankAccount', lazy = True)
+  cards = db.relationship('Card', backref='bank_account', lazy = True)
+  transactions = db.relationship('Transaction', backref='bank_account', lazy = True)
 
   def __repr__(self):
     return '<Bank Account  %r>' % self.id
 
 class Transaction(db.Model):
-  transId = db.Column(db.Integer, primary_key=True)
+  id = db.Column(db.Integer, primary_key=True)
   date = db.Column(db.Date)
   amount = db.Column(db.Float)
 
-  bankaccount_id = db.Column(db.Integer, db.ForeignKey('bankAccount.id'), nullable = False)
-  transactionGroup = db.relationship('TransactionGroup', backref='transaction', lazy = True)
+  bank_account_id = db.Column(db.Integer, db.ForeignKey('bank_account.id'), nullable = False)
+  transaction_groups = db.relationship('TransactionGroup', backref='transaction', lazy = True)
 
 class TransactionGroup(db.Model):
   id = db.Column(db.Integer, primary_key=True)
@@ -51,24 +52,30 @@ class Card(db.Model):
   type = db.Column(db.String(200), unique= False)
   expiryDate = db.Column(db.Date, unique= False)
 
-  bankaccount_id = db.Column(db.Integer, db.ForeignKey('bankAccount.id'), nullable = False)
+  bank_account_id = db.Column(db.Integer, db.ForeignKey('bank_account.id'), nullable = False)
 
-# db.create_all()
+db.create_all()
 print("db created", flush=True)
 
 @application.route('/')
 def hello_world():
   return 'iSwift'
 
-@application.route('/users', methods=['POST'])
+@application.route('/users', methods=['POST', 'GET'])
 def users():
   if request.method == 'POST':
+    firstName = request.body.firstName
+    lastName = request.body.lastName
+    password = request.body.password
 
-    user = User(firstName='Nicholas', lastName='Chong')
+    user = User(firstName=firstName, lastName=lastName, password=password)
     db.session.add(user)
-    db.session.commit()
-    print(user, flush=True)
-    return 'done!'
+    result = db.session.commit()
+    return result
+  elif request.method == 'GET':
+    users = User.query.all()
+    return users
+
 
 if __name__ == '__main__':
   application.run()
