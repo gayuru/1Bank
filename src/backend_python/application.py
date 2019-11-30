@@ -107,11 +107,19 @@ def accid_accounts_get():
     tasks= BankAccount.queryfilter_by(request.body.id).all
     return tasks
 
-#get account by id
+#get all transactions by a specific account
 @application.route('/accounts/:accId/transactions', methods=['GET'])
 def transactions_accid_get():
   if request.method == 'GET':
     tasks= Transaction.queryfilter_by(request.body.bank_account_id).all
     return tasks
+
+# #get all transactions by a specific account
+# @application.route('/accounts/:accId/transactions&filter=debit', methods=['GET'])
+# def transactions_accid_get():
+#   if request.method == 'GET':
+#     tasks= Transaction.queryfilter_by(request.body.bank_account_id).all
+#     return tasks
+
 if __name__ == '__main__':
   application.run()
