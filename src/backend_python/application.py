@@ -32,5 +32,14 @@ def users():
     print(user, flush=True)
     return 'done!'
 
+#liza
+@application.route('/accounts', methods=['GET'])
+def users():
+  if request.method == 'GET':
+    tasks= BankAccount.query.all()
+    return tasks
+
+
+
 if __name__ == '__main__':
   application.run()
