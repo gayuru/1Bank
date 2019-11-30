@@ -202,3 +202,18 @@ DerivedData/
 
 # End of https://www.gitignore.io/api/xcode
 # End of https://www.gitignore.io/api/macos,python,windows
+.idea/1Bank.iml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/1Bank.iml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+*.iml
+*.xml
+.idea/1Bank.iml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/misc.xml
