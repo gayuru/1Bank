@@ -16,9 +16,9 @@ ma = Marshmallow(application)
 class User(db.Model):
   __tablename__='users'
   id = db.Column(db.Integer, primary_key=True)
-  firstName = db.Column(db.String(200), unique=False, nullable=True)
-  lastName = db.Column(db.String(200), unique=False, nullable=True)
-  password = db.Column(db.String(200), unique=False,nullable=True)
+  firstName = db.Column(db.String(200), unique=False, nullable=False)
+  lastName = db.Column(db.String(200), unique=False, nullable=False)
+  password = db.Column(db.String(200), unique=False,nullable=False)
 
   bankAccounts = db.relationship("BankAccount", backref='users')
 
@@ -34,14 +34,12 @@ class BankAccount(db.Model):
   cards = db.relationship('Card', backref='bank_accounts', lazy = True)
   transactions = db.relationship('Transaction', backref='bank_accounts', lazy = True)
 
-
 class TransactionGroup(db.Model):
   __tablename__='transaction_groups'
   id = db.Column(db.Integer, primary_key=True)
-  name = db.Column(db.String(200), unique=True)
-  # description = db.Column(db.String(200), unique= False, nullable=True)
+  name = db.Column(db.String(200), unique=False, nullable=False)
 
-  transactions = db.relationship('Transaction', backref='transactions', lazy = True)
+  transactions = db.relationship('Transaction', backref='transaction_groups', lazy = True)
 
 class Transaction(db.Model):
   __tablename__='transactions'
@@ -50,7 +48,6 @@ class Transaction(db.Model):
   amount = db.Column(db.Float)
   bank_account_id = db.Column(db.Integer, db.ForeignKey('bank_accounts.id'), nullable = False)
   transaction_group_id = db.Column(db.Integer, db.ForeignKey('transaction_groups.id'), nullable = False)
-
 
 class Card(db.Model):
   __tablename__='cards'
@@ -68,13 +65,13 @@ class BankAccountSchema(ma.ModelSchema):
   class Meta:
     model = BankAccount
 
-class TransactionSchema(ma.ModelSchema):
-  class Meta:
-    model = Transaction
-
 class TransactionGroupSchema(ma.ModelSchema):
   class Meta:
     model = TransactionGroup
+
+class TransactionSchema(ma.ModelSchema):
+  class Meta:
+    model = Transaction
 
 class CardSchema(ma.ModelSchema):
   class Meta:
@@ -89,51 +86,55 @@ users_schema = UserSchema(many = True)
 bank_account_schema = BankAccountSchema()
 bank_accounts_schema = BankAccountSchema(many = True)
 
-transaction_schema = TransactionSchema()
-transactions_schema = TransactionSchema(many = True)
-
 transaction_group_schema = TransactionGroupSchema()
 transaction_groups_schema = TransactionGroupSchema(many = True)
+
+transaction_schema = TransactionSchema()
+transactions_schema = TransactionSchema(many = True)
 
 card_schema = CardSchema()
 cards_schema = CardSchema(many = True)
 
 def addSampleData():
-  # Transaction groups
-  transactionGroups = [
-    TransactionGroup(name='Business'),
-    TransactionGroup(name='Donations'),
-    TransactionGroup(name='Education'),
-    TransactionGroup(name='Uncategorised'),
-    TransactionGroup(name='Eating Out'),
-    TransactionGroup(name='Shopping'),
-    TransactionGroup(name='Health'),
-    TransactionGroup(name='Groceries'),
-    TransactionGroup(name='Entertainment'),
-    TransactionGroup(name='Cash'),
-    TransactionGroup(name='Utilities'),
-    TransactionGroup(name='Transport'),
-    TransactionGroup(name='Travel'),
-    TransactionGroup(name='Home'),
-    TransactionGroup(name='Fees & Interest'),
-    TransactionGroup(name='Tax Paid')
-  ]
-
-  # Users
-  users = [
-    User(firstName="John", lastName="Lee", password=123),
-    User(firstName="Jessica", lastName="Iskandr", password=123),
-    User(firstName="Peter", lastName="Nguyen", password=123),
-    User(firstName="Liza", lastName="Tawaf", password=123)
-  ]
-
-  # Bank accounts
-  bankAccounts = [
-    BankAccount(accountName='Japan Trip', bankName='NAB', verificationId='y7NzhTn6', accountType='Savings', user_id = 3),
-    BankAccount(accountName='Everyday', bankName='Commonwealth Bank', verificationId='7XPMaRQq', accountType='Checking', user_id = 3),
-    BankAccount(accountName='Usual Spending', bankName='Commonwealth Bank', verificationId='tQ9iTHHj', accountType='Checking', user_id = 4),
-    BankAccount(accountName='Europe Trip', bankName='ANZ', verificationId='kuPEe9aT', accountType='Savings', user_id = 4)
-  ]
+  tg = TransactionGroup(name='business')
+  db.session.add(tg)
+  db.session.commit()
+  transaction_group_schema.dump(tg)
+  # # Transaction groups
+  # transactionGroups = [
+  #   TransactionGroup(name='Business'),
+  #   TransactionGroup(name='Donations'),
+  #   TransactionGroup(name='Education'),
+  #   TransactionGroup(name='Uncategorised'),
+  #   TransactionGroup(name='Eating Out'),
+  #   TransactionGroup(name='Shopping'),
+  #   TransactionGroup(name='Health'),
+  #   TransactionGroup(name='Groceries'),
+  #   TransactionGroup(name='Entertainment'),
+  #   TransactionGroup(name='Cash'),
+  #   TransactionGroup(name='Utilities'),
+  #   TransactionGroup(name='Transport'),
+  #   TransactionGroup(name='Travel'),
+  #   TransactionGroup(name='Home'),
+  #   TransactionGroup(name='Fees & Interest'),
+  #   TransactionGroup(name='Tax Paid')
+  # ]
+  #
+  # # Users
+  # users = [
+  #   User(firstName="John", lastName="Lee", password=123),
+  #   User(firstName="Jessica", lastName="Iskandr", password=123),
+  #   User(firstName="Peter", lastName="Nguyen", password=123),
+  #   User(firstName="Liza", lastName="Tawaf", password=123)
+  # ]
+  #
+  # # Bank accounts
+  # bankAccounts = [
+  #   BankAccount(accountName='Japan Trip', bankName='NAB', verificationId='y7NzhTn6', accountType='Savings', user_id = 3),
+  #   BankAccount(accountName='Everyday', bankName='Commonwealth Bank', verificationId='7XPMaRQq', accountType='Checking', user_id = 3),
+  #   BankAccount(accountName='Usual Spending', bankName='Commonwealth Bank', verificationId='tQ9iTHHj', accountType='Checking', user_id = 4),
+  #   BankAccount(accountName='Europe Trip', bankName='ANZ', verificationId='kuPEe9aT', accountType='Savings', user_id = 4)
+  # ]
 
   # Transactions
   # transactions = [
@@ -142,13 +143,13 @@ def addSampleData():
 
   # Cards
 
-  all = [(transactionGroups, transaction_group_schema), (users, user_schema), (bankAccounts, bank_account_schema)]
-
-  for model in all:
-    for entry in model[0]:
-      db.session.add(entry)
-      db.session.commit()
-      model[1].dump(entry)
+  # all = [(transactionGroups, transaction_group_schema), (users, user_schema), (bankAccounts, bank_account_schema)]
+  #
+  # for model in all:
+  #   for entry in model[0]:
+  #     db.session.add(entry)
+  #     db.session.commit()
+  #     model[1].dump(entry)
 
 addSampleData()
 print("db created", flush=True)
