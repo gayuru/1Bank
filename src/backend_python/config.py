@@ -5,7 +5,7 @@
 POSTGRES_USER="iswift"
 POSTGRES_PW="iswift123"
 POSTGRES_URL="iswift-backend.cpahn5tv7eqr.ap-southeast-2.rds.amazonaws.com"
-POSTGRES_DB="iswift-backend"
+POSTGRES_DB="iswift"
 
 SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user=POSTGRES_USER,pw=POSTGRES_PW,url=POSTGRES_URL,db=POSTGRES_DB)
 

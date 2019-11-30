@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from config import SQLALCHEMY_DATABASE_URI
 import sys
@@ -18,6 +18,16 @@ class User(db.Model):
 @application.route('/')
 def hello_world():
   return 'iSwift'
+
+@application.route('/users', methods=['POST'])
+def users():
+  if request.method == 'POST':
+
+    user = User(firstName='Nicholas', lastName='Chong')
+    db.session.add(user)
+    db.session.commit()
+    print(user, flush=True)
+    return 'done!'
 
 if __name__ == '__main__':
   application.run()
