@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Proxima Nova Bold.otf">
+            <string>ProximaNova-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -15,22 +20,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d4-6S-tQo">
-                                <rect key="frame" x="172" y="455" width="46" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Eyl-d9-E0f">
+                                <rect key="frame" x="-4" y="-13" width="424" height="922"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="423.99999999999994" id="BRK-L8-6sS"/>
+                                    <constraint firstAttribute="height" constant="922" id="I3y-tT-Mpy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashScreenG" translatesAutoresizingMaskIntoConstraints="NO" id="Isd-pe-PdJ">
+                                <rect key="frame" x="-25" y="-13" width="467" height="922"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="922" id="2oC-aS-FLP"/>
+                                    <constraint firstAttribute="width" constant="466.99999999999994" id="IJE-pg-b7n"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="896" id="SEN-u5-lSj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="e0T-Ng-AbQ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="exW-NZ-q4S">
+                                <rect key="frame" x="176" y="47" width="62" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="OY1-Ic-VWk" kind="show" id="4o0-Ht-h6E"/>
-                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banking Reimagined" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGg-OM-DrS">
+                                <rect key="frame" x="48" y="620" width="205" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="L89-18-bSz"/>
+                                    <constraint firstAttribute="height" constant="93" id="d3y-w1-UZ6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1be-nC-xCb">
+                                <rect key="frame" x="48" y="779" width="158" height="56"/>
+                                <color key="backgroundColor" red="0.22825304311184233" green="0.21498214553663036" blue="0.74427907124193537" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="CSe-sR-uP7"/>
+                                    <constraint firstAttribute="width" constant="158" id="rzZ-Gu-y8L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smarter way to manage all your bank accounts in one app." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbg-zz-cuk">
+                                <rect key="frame" x="48" y="721" width="282" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="7jN-Ko-C71"/>
+                                    <constraint firstAttribute="height" constant="50" id="hPz-c1-FTO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gbg-zz-cuk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="6JV-aK-Fhn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1be-nC-xCb" secondAttribute="bottom" constant="27" id="8cS-cl-Xub"/>
+                            <constraint firstItem="Isd-pe-PdJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-13" id="Dwp-IU-j8b"/>
+                            <constraint firstItem="Isd-pe-PdJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="27.999999999999943" id="GLa-wM-IEQ"/>
+                            <constraint firstItem="Gbg-zz-cuk" firstAttribute="top" secondItem="gGg-OM-DrS" secondAttribute="bottom" constant="8" id="Po1-34-GUw"/>
+                            <constraint firstItem="1be-nC-xCb" firstAttribute="top" secondItem="Gbg-zz-cuk" secondAttribute="bottom" constant="8" id="RRA-hM-Kdy"/>
+                            <constraint firstItem="Eyl-d9-E0f" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-13" id="Ra3-5a-aot"/>
+                            <constraint firstItem="Eyl-d9-E0f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-4" id="TFN-gW-9Wn"/>
+                            <constraint firstAttribute="bottom" secondItem="Isd-pe-PdJ" secondAttribute="bottom" constant="-13" id="agw-Hd-Cic"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eyl-d9-E0f" secondAttribute="trailing" constant="-5.9999999999999432" id="b5v-yD-QJA"/>
+                            <constraint firstItem="1be-nC-xCb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="bG9-aR-fMy"/>
+                            <constraint firstItem="Gbg-zz-cuk" firstAttribute="top" secondItem="gGg-OM-DrS" secondAttribute="bottom" constant="8" id="bRX-hG-tSQ"/>
+                            <constraint firstItem="gGg-OM-DrS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="jCa-KJ-Sua"/>
+                            <constraint firstAttribute="bottom" secondItem="Eyl-d9-E0f" secondAttribute="bottom" constant="-13" id="n5S-gx-j2y"/>
+                            <constraint firstItem="Isd-pe-PdJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-25" id="pHb-yJ-BNP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="138"/>
+            <point key="canvasLocation" x="-29" y="154"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="RDS-Pg-Ufn">
@@ -40,7 +111,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gqi-bI-gId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="145"/>
+            <point key="canvasLocation" x="735" y="163"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="129" height="131"/>
+        <image name="splashScreenBackground" width="374" height="811"/>
+        <image name="splashScreenG" width="374" height="812"/>
+    </resources>
 </document>
