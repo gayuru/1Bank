@@ -22,11 +22,6 @@ class User(db.Model):
 
   bankAccounts = db.relationship("BankAccount", backref='users')
 
-  def __init__(self, firstName, lastName, password):
-    self.firstName = firstName
-    self.lastName = lastName
-    self.password = password
-
 class BankAccount(db.Model):
   __tablename__='bank_accounts'
   id = db.Column(db.Integer, primary_key=True)
@@ -34,27 +29,27 @@ class BankAccount(db.Model):
   bankName = db.Column(db.String(200), unique=False, nullable=True)
   verificationId = db.Column(db.String(200), unique=False, nullable=True)
   accountType = db.Column(db.String(200), unique=False, nullable=True)
-
   user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+
   cards = db.relationship('Card', backref='bank_accounts', lazy = True)
   transactions = db.relationship('Transaction', backref='bank_accounts', lazy = True)
 
+
+class TransactionGroup(db.Model):
+  __tablename__='transaction_groups'
+  id = db.Column(db.Integer, primary_key=True)
+  name = db.Column(db.String(200), unique=True)
+  # description = db.Column(db.String(200), unique= False, nullable=True)
+
+  transactions = db.relationship('Transaction', backref='transactions', lazy = True)
 
 class Transaction(db.Model):
   __tablename__='transactions'
   id = db.Column(db.Integer, primary_key=True)
   date = db.Column(db.Date)
   amount = db.Column(db.Float)
-
   bank_account_id = db.Column(db.Integer, db.ForeignKey('bank_accounts.id'), nullable = False)
-  transaction_groups = db.relationship('TransactionGroup', backref='transactions', lazy = True)
-
-class TransactionGroup(db.Model):
-  __tablename__='transaction_groups'
-  id = db.Column(db.Integer, primary_key=True)
-  description = db.Column(db.String(200), unique= False)
-
-  transaction_id = db.Column(db.Integer, db.ForeignKey('transactions.id'), nullable = False)
+  transaction_group_id = db.Column(db.Integer, db.ForeignKey('transaction_groups.id'), nullable = False)
 
 
 class Card(db.Model):
@@ -85,7 +80,7 @@ class CardSchema(ma.ModelSchema):
   class Meta:
     model = Card
 
-db.drop_all()
+# db.drop_all()
 db.create_all()
 
 user_schema = UserSchema()
@@ -101,11 +96,66 @@ transaction_group_schema = TransactionGroupSchema()
 transaction_groups_schema = TransactionGroupSchema(many = True)
 
 card_schema = CardSchema()
-@application.route('/')
-def hello_world():
-  return 'iSwift'
+cards_schema = CardSchema(many = True)
 
+def addSampleData():
+  # Transaction groups
+  transactionGroups = [
+    TransactionGroup(name='Business'),
+    TransactionGroup(name='Donations'),
+    TransactionGroup(name='Education'),
+    TransactionGroup(name='Uncategorised'),
+    TransactionGroup(name='Eating Out'),
+    TransactionGroup(name='Shopping'),
+    TransactionGroup(name='Health'),
+    TransactionGroup(name='Groceries'),
+    TransactionGroup(name='Entertainment'),
+    TransactionGroup(name='Cash'),
+    TransactionGroup(name='Utilities'),
+    TransactionGroup(name='Transport'),
+    TransactionGroup(name='Travel'),
+    TransactionGroup(name='Home'),
+    TransactionGroup(name='Fees & Interest'),
+    TransactionGroup(name='Tax Paid')
+  ]
+
+  # Users
+  users = [
+    User(firstName="John", lastName="Lee", password=123),
+    User(firstName="Jessica", lastName="Iskandr", password=123),
+    User(firstName="Peter", lastName="Nguyen", password=123),
+    User(firstName="Liza", lastName="Tawaf", password=123)
+  ]
+
+  # Bank accounts
+  bankAccounts = [
+    BankAccount(accountName='Japan Trip', bankName='NAB', verificationId='y7NzhTn6', accountType='Savings', user_id = 3),
+    BankAccount(accountName='Everyday', bankName='Commonwealth Bank', verificationId='7XPMaRQq', accountType='Checking', user_id = 3),
+    BankAccount(accountName='Usual Spending', bankName='Commonwealth Bank', verificationId='tQ9iTHHj', accountType='Checking', user_id = 4),
+    BankAccount(accountName='Europe Trip', bankName='ANZ', verificationId='kuPEe9aT', accountType='Savings', user_id = 4)
+  ]
+
+  # Transactions
+  # transactions = [
+  #   Transaction()
+  # ]
+
+  # Cards
+
+  all = [(transactionGroups, transaction_group_schema), (users, user_schema), (bankAccounts, bank_account_schema)]
+
+  for model in all:
+    for entry in model[0]:
+      db.session.add(entry)
+      db.session.commit()
+      model[1].dump(entry)
+
+addSampleData()
 print("db created", flush=True)
+
+@application.route('/')
+def index():
+  return 'iSwift'
 
 @application.route('/users', methods=['POST', 'GET'])
 def users():
@@ -122,8 +172,6 @@ def users():
   elif request.method == 'GET':
     users = User.query.all()
     return users_schema.jsonify(users)
-
-cards_schema = CardSchema(many = True)
 
 #get user
 @application.route('/users/<userId>', methods=['GET'])
@@ -194,8 +242,6 @@ def transactions():
 def transaction_get(transId):
   transaction = Transaction.query.filter_by(id = transId).first()
   return transaction_schema.jsonify(transaction)
-
-
 
 if __name__ == '__main__':
   application.run()

@@ -9,9 +9,6 @@ POSTGRES_DB="iswift"
 
 SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user=POSTGRES_USER,pw=POSTGRES_PW,url=POSTGRES_URL,db=POSTGRES_DB)
 
-# Uncomment the line below if you want to work with a local DB
-#SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
-
 SQLALCHEMY_POOL_RECYCLE = 3600
 
 WTF_CSRF_ENABLED = True
