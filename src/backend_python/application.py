@@ -15,6 +15,9 @@ class User(db.Model):
   firstName = db.Column(db.String(200), unique=False, nullable=True)
   lastName = db.Column(db.String(200), unique=False, nullable=True)
 
+db.create_all()
+print("db created", flush=True)
+
 @application.route('/')
 def hello_world():
   return 'iSwift'
