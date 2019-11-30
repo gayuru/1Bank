@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qdk-Sz-a1R">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Proxima Nova Bold.otf">
+            <string>ProximaNova-Bold</string>
+        </array>
+        <array key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--CreateNewAccount-->
+        <scene sceneID="YXR-9w-IKk">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Ur2-eS-GfH" userLabel="CreateNewAccount" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f4b-Ed-SBm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="L1L-x9-LZA">
+                                <rect key="frame" x="181.5" y="52" width="51" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="NHg-nA-Pub"/>
+                                    <constraint firstAttribute="width" constant="51" id="it4-aP-exb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byE-fx-At0">
+                                <rect key="frame" x="67" y="518" width="180" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="23"/>
+                                <state key="normal" title="Create     ">
+                                    <color key="titleColor" red="0.2282530431" green="0.2149821455" blue="0.74427907120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diagonal-arrow 1" translatesAutoresizingMaskIntoConstraints="NO" id="OUM-P5-31o">
+                                <rect key="frame" x="175" y="529" width="41" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Create Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isX-Mq-7F4">
+                                <rect key="frame" x="67" y="160" width="205" height="36"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="29"/>
+                                <color key="textColor" red="0.2282530431" green="0.2149821455" blue="0.74427907120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fill in the form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMf-dg-ReZ">
+                                <rect key="frame" x="67" y="199" width="136" height="27"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="22"/>
+                                <color key="textColor" red="0.48627450979999998" green="0.52156862749999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rge-dt-N0I">
+                                <rect key="frame" x="67" y="254" width="347" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.2282530431" green="0.2149821455" blue="0.74427907120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y12-4D-8jn">
+                                <rect key="frame" x="67" y="340" width="347" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.2282530431" green="0.2149821455" blue="0.74427907120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcS-bK-VHY" userLabel="LineUsername">
+                                <rect key="frame" x="67" y="300" width="347" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.54901960780000003" green="0.58039215690000001" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rx1-qa-mMD" userLabel="LinePassword">
+                                <rect key="frame" x="67" y="383" width="347" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.54901960780000003" green="0.58039215690000001" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="L1L-x9-LZA" firstAttribute="top" secondItem="UB7-nK-Gmf" secondAttribute="top" constant="8" id="3g8-eN-fTH"/>
+                            <constraint firstItem="L1L-x9-LZA" firstAttribute="centerX" secondItem="f4b-Ed-SBm" secondAttribute="centerX" id="JFt-sc-Cva"/>
+                            <constraint firstItem="wMf-dg-ReZ" firstAttribute="top" secondItem="isX-Mq-7F4" secondAttribute="bottom" constant="1" id="QhB-UH-3Xb"/>
+                            <constraint firstItem="wMf-dg-ReZ" firstAttribute="top" secondItem="isX-Mq-7F4" secondAttribute="bottom" constant="1" id="wpU-cx-N9W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UB7-nK-Gmf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZ6-aJ-tA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2187" y="-216"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jkh-NS-TIq">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Q3Y-p3-8ZU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="soP-l9-XHq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your bank  of choice" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-3o-pYo">
+                                <rect key="frame" x="55" y="110" width="255" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="6O2-DK-puk"/>
+                                    <constraint firstAttribute="width" constant="255" id="HCV-P8-R4g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="31"/>
+                                <color key="textColor" red="0.2282530431" green="0.2149821455" blue="0.74427907120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decide what bank you want to open  your account with" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwy-yj-WgE">
+                                <rect key="frame" x="55" y="188" width="316" height="46.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46.5" id="4Ie-B5-Szl"/>
+                                    <constraint firstAttribute="width" constant="316" id="hnU-N2-Wid"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="19"/>
+                                <color key="textColor" red="0.48627450979999998" green="0.52156862749999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3g-GI-VO2" userLabel="commbank">
+                                <rect key="frame" x="55" y="295" width="153" height="213"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqb-Sb-ILQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="213"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="combank_deco"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commonwealth Bank" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tri-pr-i03">
+                                        <rect key="frame" x="17" y="59" width="119" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="119" id="RLi-P8-mdh"/>
+                                            <constraint firstAttribute="height" constant="39" id="Zre-UJ-kOZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="textColor" red="0.96862745100000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="combank_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="pXC-fO-rbY">
+                                        <rect key="frame" x="17" y="15" width="36" height="33.000000000000455"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="W75-uB-LeW"/>
+                                            <constraint firstAttribute="width" constant="36" id="nuA-E4-l0A"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tri-pr-i03" firstAttribute="leading" secondItem="m3g-GI-VO2" secondAttribute="leading" constant="17" id="2Hh-I2-923"/>
+                                    <constraint firstItem="pXC-fO-rbY" firstAttribute="leading" secondItem="m3g-GI-VO2" secondAttribute="leading" constant="17" id="3nI-N5-I6C"/>
+                                    <constraint firstAttribute="width" constant="153" id="I4p-BB-zbb"/>
+                                    <constraint firstAttribute="height" constant="213" id="Ohv-2e-TYP"/>
+                                    <constraint firstItem="pXC-fO-rbY" firstAttribute="top" secondItem="m3g-GI-VO2" secondAttribute="top" constant="15" id="Tof-tv-Z3L"/>
+                                    <constraint firstItem="tri-pr-i03" firstAttribute="top" secondItem="pXC-fO-rbY" secondAttribute="bottom" constant="11" id="u3U-To-yBU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjr-u7-owr" userLabel="nab">
+                                <rect key="frame" x="225" y="313" width="153" height="213"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfs-uc-kTE">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="213"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="nab_deco"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="National Australia Bank" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDz-0q-2zU">
+                                        <rect key="frame" x="21" y="55" width="80" height="59"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Mgs-Ai-qBs"/>
+                                            <constraint firstAttribute="height" constant="59" id="puK-9x-Z1G"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="textColor" red="0.96862745100000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nab_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="xQf-Wv-apj">
+                                        <rect key="frame" x="15" y="14" width="36" height="33.000000000000057"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="I1m-Pj-C28"/>
+                                            <constraint firstAttribute="height" constant="33" id="MiV-qi-4w8"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="A3H-tL-L4o"/>
+                                    <constraint firstItem="xQf-Wv-apj" firstAttribute="leading" secondItem="jjr-u7-owr" secondAttribute="leading" constant="15" id="JA6-nh-Hd4"/>
+                                    <constraint firstItem="KDz-0q-2zU" firstAttribute="leading" secondItem="jjr-u7-owr" secondAttribute="leading" constant="21" id="PBc-BZ-DCk"/>
+                                    <constraint firstAttribute="height" constant="213" id="Up5-zs-H5P"/>
+                                    <constraint firstItem="KDz-0q-2zU" firstAttribute="top" secondItem="xQf-Wv-apj" secondAttribute="bottom" constant="8" id="u9O-Es-lCn"/>
+                                    <constraint firstItem="xQf-Wv-apj" firstAttribute="top" secondItem="jjr-u7-owr" secondAttribute="top" constant="14" id="xdp-r4-ipg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZg-ii-Ux4" userLabel="west_pac">
+                                <rect key="frame" x="225" y="540" width="153" height="213"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SD5-eJ-cqu">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="213"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="westpac_deco"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="west_pac_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="Dcy-bU-3ON">
+                                        <rect key="frame" x="21" y="14" width="46" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="ieb-3u-gQB"/>
+                                            <constraint firstAttribute="height" constant="36" id="q9D-EN-1g1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Westpac Bank" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-Ty-gak">
+                                        <rect key="frame" x="21" y="52" width="85" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="fP8-eD-XOl"/>
+                                            <constraint firstAttribute="width" constant="85" id="orB-oP-g48"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <color key="textColor" red="0.96862745100000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ag6-Ty-gak" firstAttribute="leading" secondItem="kZg-ii-Ux4" secondAttribute="leading" constant="21" id="3g7-Bi-rkL"/>
+                                    <constraint firstAttribute="width" constant="153" id="SoT-Gv-YWn"/>
+                                    <constraint firstItem="Dcy-bU-3ON" firstAttribute="top" secondItem="kZg-ii-Ux4" secondAttribute="top" constant="14" id="h86-bA-1Dg"/>
+                                    <constraint firstItem="ag6-Ty-gak" firstAttribute="top" secondItem="Dcy-bU-3ON" secondAttribute="bottom" constant="2" id="mIZ-h7-YOn"/>
+                                    <constraint firstItem="Dcy-bU-3ON" firstAttribute="leading" secondItem="kZg-ii-Ux4" secondAttribute="leading" constant="21" id="uZD-dr-79L"/>
+                                    <constraint firstAttribute="height" constant="213" id="zL9-nu-yg4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14K-yY-eVY" userLabel="anz">
+                                <rect key="frame" x="55" y="522" width="153" height="213"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTB-cQ-PIA">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="213"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="anz_deco"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANZ Bank" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SG-9H-1W0">
+                                        <rect key="frame" x="20" y="53" width="71" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="V9m-1x-xfm"/>
+                                            <constraint firstAttribute="width" constant="71" id="xeP-Yh-GVX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <color key="textColor" red="0.96862745100000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anz_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="8lX-Be-GW3">
+                                        <rect key="frame" x="4" y="13" width="58" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Tj5-ro-ZwS"/>
+                                            <constraint firstAttribute="width" constant="58" id="upl-WZ-fBU"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8lX-Be-GW3" firstAttribute="top" secondItem="14K-yY-eVY" secondAttribute="top" constant="13" id="3hk-vS-jMo"/>
+                                    <constraint firstAttribute="width" constant="153" id="UwE-Pb-H94"/>
+                                    <constraint firstItem="0SG-9H-1W0" firstAttribute="leading" secondItem="14K-yY-eVY" secondAttribute="leading" constant="20" id="qaj-Kc-Uta"/>
+                                    <constraint firstItem="8lX-Be-GW3" firstAttribute="leading" secondItem="14K-yY-eVY" secondAttribute="leading" constant="4" id="rRJ-LV-0DL"/>
+                                    <constraint firstAttribute="height" constant="213" id="uS8-RZ-5zq"/>
+                                    <constraint firstAttribute="bottom" secondItem="0SG-9H-1W0" secondAttribute="bottom" constant="100" id="zQS-fh-zD7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xwy-yj-WgE" firstAttribute="leading" secondItem="kkt-4a-IiZ" secondAttribute="leading" constant="55" id="1eW-fL-Ba7"/>
+                            <constraint firstItem="kZg-ii-Ux4" firstAttribute="leading" secondItem="14K-yY-eVY" secondAttribute="trailing" constant="17" id="4AQ-gc-qfg"/>
+                            <constraint firstItem="m3g-GI-VO2" firstAttribute="leading" secondItem="kkt-4a-IiZ" secondAttribute="leading" constant="55" id="6EI-dc-5cY"/>
+                            <constraint firstItem="14K-yY-eVY" firstAttribute="leading" secondItem="kkt-4a-IiZ" secondAttribute="leading" constant="55" id="8CE-rJ-Xek"/>
+                            <constraint firstItem="Xwy-yj-WgE" firstAttribute="top" secondItem="Sqy-3o-pYo" secondAttribute="bottom" constant="1" id="Hc5-tp-quj"/>
+                            <constraint firstItem="kZg-ii-Ux4" firstAttribute="top" secondItem="jjr-u7-owr" secondAttribute="bottom" constant="14" id="OK7-ea-Uc3"/>
+                            <constraint firstItem="kkt-4a-IiZ" firstAttribute="trailing" secondItem="jjr-u7-owr" secondAttribute="trailing" constant="36" id="QJz-BW-kyc"/>
+                            <constraint firstItem="Xwy-yj-WgE" firstAttribute="top" secondItem="Sqy-3o-pYo" secondAttribute="bottom" constant="1" id="TCx-UI-cVK"/>
+                            <constraint firstItem="14K-yY-eVY" firstAttribute="top" secondItem="m3g-GI-VO2" secondAttribute="bottom" constant="14" id="TUs-za-Wtb"/>
+                            <constraint firstItem="kZg-ii-Ux4" firstAttribute="top" secondItem="jjr-u7-owr" secondAttribute="bottom" constant="14" id="UqY-3d-Fvp"/>
+                            <constraint firstItem="jjr-u7-owr" firstAttribute="leading" secondItem="14K-yY-eVY" secondAttribute="trailing" constant="17" id="cCp-zY-kOS"/>
+                            <constraint firstItem="Sqy-3o-pYo" firstAttribute="leading" secondItem="kkt-4a-IiZ" secondAttribute="leading" constant="55" id="dQ3-04-bgH"/>
+                            <constraint firstItem="m3g-GI-VO2" firstAttribute="top" secondItem="Xwy-yj-WgE" secondAttribute="bottom" constant="60.5" id="gcV-C7-cRu"/>
+                            <constraint firstItem="Sqy-3o-pYo" firstAttribute="top" secondItem="kkt-4a-IiZ" secondAttribute="top" constant="66" id="grN-KB-b4a"/>
+                            <constraint firstItem="jjr-u7-owr" firstAttribute="leading" secondItem="m3g-GI-VO2" secondAttribute="trailing" constant="17" id="n1P-ZU-lhe"/>
+                            <constraint firstItem="kkt-4a-IiZ" firstAttribute="trailing" secondItem="kZg-ii-Ux4" secondAttribute="trailing" constant="36" id="rch-WZ-skA"/>
+                            <constraint firstItem="Xwy-yj-WgE" firstAttribute="top" secondItem="Sqy-3o-pYo" secondAttribute="bottom" constant="1" id="uh2-h5-hNQ"/>
+                            <constraint firstItem="jjr-u7-owr" firstAttribute="top" secondItem="Xwy-yj-WgE" secondAttribute="bottom" constant="78.5" id="ywX-pu-uYG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kkt-4a-IiZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2k3-pq-uYO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966.66666666666674" y="141.96428571428569"/>
+        </scene>
+        <!--Initial Account View Controller-->
+        <scene sceneID="Bhr-CX-XAr">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Qdk-Sz-a1R" customClass="InitialAccount_ViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="42C-sH-cNx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jessica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6b-ob-msw">
+                                <rect key="frame" x="67" y="158" width="118" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="PFR-Dt-fB1"/>
+                                    <constraint firstAttribute="height" constant="43" id="QWI-fX-cwo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="35"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUf-7M-ew1">
+                                <rect key="frame" x="67" y="119" width="89" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="8Bu-sW-G3e"/>
+                                    <constraint firstAttribute="width" constant="89" id="yJD-Ma-XdR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="35"/>
+                                <color key="textColor" red="0.22745098039215686" green="0.21568627450980393" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw_Savings_dwkw (1)" translatesAutoresizingMaskIntoConstraints="NO" id="CRt-jL-Mmx">
+                                <rect key="frame" x="22.5" y="227" width="369.00000000000091" height="307"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="307" id="AAJ-Tj-5Yy"/>
+                                    <constraint firstAttribute="width" constant="368.99999999999909" id="nxw-Qg-B5G"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JJ-p2-KYk">
+                                <rect key="frame" x="54.5" y="649" width="305" height="61"/>
+                                <color key="backgroundColor" red="0.2359198928" green="0.1900776029" blue="0.7451409698" alpha="0.64269578313253017" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="305" id="6xN-iA-Lga"/>
+                                    <constraint firstAttribute="height" constant="61" id="jAf-uO-E2G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Open a new Bank Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Q3Y-p3-8ZU" kind="showDetail" id="U7f-18-VVC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGv-7P-10V">
+                                <rect key="frame" x="54.5" y="726" width="305" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="305" id="KX6-2k-SzD"/>
+                                    <constraint firstAttribute="height" constant="56" id="jcs-WD-WOI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Add an existing bank">
+                                    <color key="titleColor" red="0.23529411759999999" green="0.18823529410000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Q3Y-p3-8ZU" kind="showDetail" id="KBF-Jl-7UZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU3-ig-F0H">
+                                <rect key="frame" x="104.5" y="562" width="205" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="Fx3-Gg-Nj0"/>
+                                    <constraint firstAttribute="height" constant="33" id="wfb-Ir-Dr3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="28"/>
+                                <color key="textColor" red="0.23529411764705882" green="0.18823529411764706" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kz-df-bOj">
+                                <rect key="frame" x="104.5" y="603" width="205" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="8Tf-8N-nlb"/>
+                                    <constraint firstAttribute="width" constant="205" id="FtB-pM-Pyd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="23"/>
+                                <color key="textColor" red="0.2359198928" green="0.1900776029" blue="0.7451409698" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dU3-ig-F0H" firstAttribute="top" secondItem="CRt-jL-Mmx" secondAttribute="bottom" constant="28" id="00k-xZ-mOh"/>
+                            <constraint firstItem="CRt-jL-Mmx" firstAttribute="top" secondItem="v6b-ob-msw" secondAttribute="bottom" constant="26" id="1OV-Uz-Rg8"/>
+                            <constraint firstItem="9JJ-p2-KYk" firstAttribute="top" secondItem="9kz-df-bOj" secondAttribute="bottom" constant="23" id="3VN-w5-hDl"/>
+                            <constraint firstItem="9kz-df-bOj" firstAttribute="top" secondItem="dU3-ig-F0H" secondAttribute="bottom" constant="8" id="7On-Sq-JwC"/>
+                            <constraint firstItem="2Rm-v6-63Z" firstAttribute="bottom" secondItem="aGv-7P-10V" secondAttribute="bottom" constant="80" id="9TL-Lv-Fuo"/>
+                            <constraint firstItem="v6b-ob-msw" firstAttribute="leading" secondItem="2Rm-v6-63Z" secondAttribute="leading" constant="67" id="K7v-vr-GGE"/>
+                            <constraint firstItem="9JJ-p2-KYk" firstAttribute="centerX" secondItem="42C-sH-cNx" secondAttribute="centerX" id="OZW-14-DpU"/>
+                            <constraint firstItem="aGv-7P-10V" firstAttribute="top" secondItem="9JJ-p2-KYk" secondAttribute="bottom" constant="16" id="S7c-ri-F1O"/>
+                            <constraint firstItem="dU3-ig-F0H" firstAttribute="centerX" secondItem="42C-sH-cNx" secondAttribute="centerX" id="Yqh-pS-iWe"/>
+                            <constraint firstItem="v6b-ob-msw" firstAttribute="top" secondItem="2Rm-v6-63Z" secondAttribute="top" constant="114" id="b5J-nS-FOT"/>
+                            <constraint firstItem="9kz-df-bOj" firstAttribute="centerX" secondItem="42C-sH-cNx" secondAttribute="centerX" id="qsP-Kj-V2G"/>
+                            <constraint firstItem="CRt-jL-Mmx" firstAttribute="top" secondItem="eUf-7M-ew1" secondAttribute="bottom" constant="65" id="r1F-7b-tdX"/>
+                            <constraint firstItem="CRt-jL-Mmx" firstAttribute="centerX" secondItem="42C-sH-cNx" secondAttribute="centerX" id="rf6-Ow-IPo"/>
+                            <constraint firstItem="eUf-7M-ew1" firstAttribute="leading" secondItem="2Rm-v6-63Z" secondAttribute="leading" constant="67" id="tYj-hA-XPO"/>
+                            <constraint firstItem="eUf-7M-ew1" firstAttribute="top" secondItem="2Rm-v6-63Z" secondAttribute="top" constant="75" id="xrB-Xo-Wu6"/>
+                            <constraint firstItem="aGv-7P-10V" firstAttribute="centerX" secondItem="42C-sH-cNx" secondAttribute="centerX" id="zRN-4V-Nqb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Rm-v6-63Z"/>
+                    </view>
+                    <connections>
+                        <outlet property="existingBankBtn" destination="aGv-7P-10V" id="6r1-ew-3KP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38G-4u-72t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8985507246376816" y="141.96428571428569"/>
+        </scene>
+        <!--AddExistingAccount-->
+        <scene sceneID="aMy-kR-r76">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="fNM-mJ-CKq" userLabel="AddExistingAccount" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HX3-bF-f2q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="JMJ-yS-YLV">
+                                <rect key="frame" x="181.5" y="52" width="51" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51" id="1Mx-dN-ghg"/>
+                                    <constraint firstAttribute="height" constant="62" id="Ur9-em-yeB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="dqc-tA-aMy"/>
+                                    <constraint firstAttribute="width" constant="51" id="v2o-Gg-YjN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JMJ-yS-YLV" firstAttribute="centerX" secondItem="HX3-bF-f2q" secondAttribute="centerX" id="4ZM-XH-LgS"/>
+                            <constraint firstItem="JMJ-yS-YLV" firstAttribute="top" secondItem="UoM-D2-gUg" secondAttribute="top" constant="8" id="6ls-E9-VHY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UoM-D2-gUg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IW4-b2-BgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2187" y="512"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="129" height="131"/>
+        <image name="anz_deco" width="512" height="713"/>
+        <image name="anz_logo_white" width="1024" height="768"/>
+        <image name="combank_deco" width="368" height="512"/>
+        <image name="combank_logo_white" width="1761" height="1759"/>
+        <image name="diagonal-arrow 1" width="512" height="512"/>
+        <image name="nab_deco" width="512" height="713"/>
+        <image name="nab_logo_white" width="210" height="237"/>
+        <image name="undraw_Savings_dwkw (1)" width="3494" height="2509"/>
+        <image name="west_pac_logo_white" width="1900" height="950"/>
+        <image name="westpac_deco" width="512" height="713"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="U7f-18-VVC"/>
+    </inferredMetricsTieBreakers>
+</document>
