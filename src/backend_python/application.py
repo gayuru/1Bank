@@ -53,7 +53,7 @@ class Card(db.Model):
 
   bankaccount_id = db.Column(db.Integer, db.ForeignKey('bankAccount.id'), nullable = False)
 
-db.create_all()
+# db.create_all()
 print("db created", flush=True)
 
 @application.route('/')
