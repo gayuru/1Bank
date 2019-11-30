@@ -430,11 +430,22 @@
                         <outlet property="setttingsView" destination="HYC-kB-aPS" id="LHO-Ct-URA"/>
                         <outlet property="transactionsTableView" destination="w7N-Tw-z74" id="N6Q-AJ-WN9"/>
                         <outlet property="usernameLabel" destination="pRp-YT-CkY" id="XaW-fu-NEa"/>
+                        <segue destination="jFC-uA-BKk" kind="show" identifier="goToAccount" id="dHX-Hf-6eq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKE-wM-vJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="118.84057971014494" y="125.89285714285714"/>
+        </scene>
+        <!--Accounts-->
+        <scene sceneID="LH6-No-DlV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Accounts" id="jFC-uA-BKk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zVo-nP-87E"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aqb-zO-OBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="139"/>
         </scene>
     </scenes>
     <resources>

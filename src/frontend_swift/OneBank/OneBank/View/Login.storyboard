@@ -59,6 +59,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="loginAction:" destination="tk9-9s-JmK" eventType="touchUpInside" id="iZg-Pd-u38"/>
                                     <segue destination="YtP-o9-a0u" kind="showDetail" id="bOH-AO-7f9"/>
                                 </connections>
                             </button>
@@ -81,6 +82,9 @@
                                 <color key="textColor" red="0.2282530431" green="0.2149821455" blue="0.74427907120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <action selector="passwordField:" destination="tk9-9s-JmK" eventType="editingDidEnd" id="FmH-YP-awH"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-FL-X1s" userLabel="LineUsername">
                                 <rect key="frame" x="67" y="416" width="347" height="1"/>
@@ -130,6 +134,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yho-iR-OSw"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="me3-2y-zZ1" id="6bI-Pg-bVG"/>
+                        <outlet property="usernameField" destination="4Jz-8w-pHD" id="9Tm-X0-Whl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0T8-HH-SX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

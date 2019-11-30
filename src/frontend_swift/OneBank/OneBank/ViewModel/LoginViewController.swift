@@ -9,12 +9,15 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+ 
+    private let model = RestRequest.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         let userTappedOtherThanKeyboard: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector(("closeKeyboard")))
         view.addGestureRecognizer(userTappedOtherThanKeyboard)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -22,6 +25,14 @@ class LoginViewController: UIViewController {
            view.endEditing(true)
     }
 
+    
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
+    
+    @IBAction func loginAction(_ sender: Any) {
+        Globals.username = usernameField.text!
+    }
+    
     /*
     // MARK: - Navigation
 
