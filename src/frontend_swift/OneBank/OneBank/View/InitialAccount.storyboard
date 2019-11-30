@@ -232,7 +232,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="combank_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="pXC-fO-rbY">
-                                        <rect key="frame" x="17" y="15" width="36" height="33.000000000000455"/>
+                                        <rect key="frame" x="17" y="15" width="36" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="W75-uB-LeW"/>
                                             <constraint firstAttribute="width" constant="36" id="nuA-E4-l0A"/>
@@ -270,7 +270,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nab_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="xQf-Wv-apj">
-                                        <rect key="frame" x="15" y="14" width="36" height="33.000000000000057"/>
+                                        <rect key="frame" x="15" y="14" width="36" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="I1m-Pj-C28"/>
                                             <constraint firstAttribute="height" constant="33" id="MiV-qi-4w8"/>
@@ -424,7 +424,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw_Savings_dwkw (1)" translatesAutoresizingMaskIntoConstraints="NO" id="CRt-jL-Mmx">
-                                <rect key="frame" x="22.5" y="227" width="369.00000000000091" height="307"/>
+                                <rect key="frame" x="22.5" y="227" width="369" height="307"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="307" id="AAJ-Tj-5Yy"/>
                                     <constraint firstAttribute="width" constant="368.99999999999909" id="nxw-Qg-B5G"/>

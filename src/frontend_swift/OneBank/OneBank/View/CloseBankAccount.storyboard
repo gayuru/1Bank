@@ -148,7 +148,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 12 400" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8X-CY-3GB">
-                                <rect key="frame" x="108.5" y="306" width="197" height="41"/>
+                                <rect key="frame" x="108.5" y="321" width="197" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="197" id="6fz-ua-3vL"/>
                                     <constraint firstAttribute="height" constant="41" id="BVF-bl-mnI"/>
@@ -177,12 +177,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCp-qL-u6w">
-                                        <rect key="frame" x="12.5" y="373" width="305" height="56"/>
+                                        <rect key="frame" x="43.5" y="382" width="243" height="42"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="305" id="0Eo-oD-yNW"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="47" id="DTt-9G-pyy"/>
-                                            <constraint firstAttribute="width" constant="305" id="bb8-Hf-Ku1"/>
-                                            <constraint firstAttribute="height" constant="56" id="qit-ZY-sRR"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="243" id="0Eo-oD-yNW"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="DTt-9G-pyy"/>
+                                            <constraint firstAttribute="width" constant="243" id="bb8-Hf-Ku1"/>
+                                            <constraint firstAttribute="height" constant="42" id="qit-ZY-sRR"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Transfer to existing account">
@@ -190,7 +190,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
+                                                <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -202,15 +202,15 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXC-fX-DIu">
-                                        <rect key="frame" x="30" y="318" width="271" height="56"/>
+                                        <rect key="frame" x="31.5" y="320" width="267" height="52"/>
                                         <color key="backgroundColor" red="0.2359198928" green="0.1900776029" blue="0.7451409698" alpha="0.64269578309999997" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="BxZ-Fd-5aE"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="271" id="JTE-RS-TZh"/>
-                                            <constraint firstAttribute="width" constant="271" id="K0C-iq-OQf"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="gu0-h4-RkT"/>
+                                            <constraint firstAttribute="height" constant="52" id="BxZ-Fd-5aE"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="267" id="JTE-RS-TZh"/>
+                                            <constraint firstAttribute="width" constant="267" id="K0C-iq-OQf"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="gu0-h4-RkT"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Transfer to new bank account">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -219,19 +219,22 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="aJm-Hd-5pM" kind="showDetail" id="CHx-Jl-LdA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.72161704301834106" green="0.76580506563186646" blue="0.9343535304069519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="aXC-fX-DIu" firstAttribute="centerX" secondItem="suB-6x-Fab" secondAttribute="centerX" id="9m6-AL-TEW"/>
                                     <constraint firstItem="MHH-Aw-Tlz" firstAttribute="top" secondItem="ycn-xQ-BAM" secondAttribute="bottom" constant="19" id="Dj9-6y-eqp"/>
-                                    <constraint firstItem="aXC-fX-DIu" firstAttribute="top" secondItem="MHH-Aw-Tlz" secondAttribute="bottom" constant="13" id="e0k-ah-4jv"/>
+                                    <constraint firstItem="aXC-fX-DIu" firstAttribute="top" secondItem="MHH-Aw-Tlz" secondAttribute="bottom" constant="15" id="e0k-ah-4jv"/>
                                     <constraint firstAttribute="width" constant="330" id="gdG-vB-2an"/>
                                     <constraint firstItem="DCp-qL-u6w" firstAttribute="centerX" secondItem="suB-6x-Fab" secondAttribute="centerX" id="l3D-01-8Y7"/>
                                     <constraint firstItem="MHH-Aw-Tlz" firstAttribute="centerX" secondItem="suB-6x-Fab" secondAttribute="centerX" id="lFA-2I-nXU"/>
                                     <constraint firstItem="ycn-xQ-BAM" firstAttribute="top" secondItem="suB-6x-Fab" secondAttribute="top" constant="18" id="mpg-lh-QF6"/>
                                     <constraint firstItem="ycn-xQ-BAM" firstAttribute="centerX" secondItem="suB-6x-Fab" secondAttribute="centerX" id="no7-TF-JFI"/>
-                                    <constraint firstAttribute="bottom" secondItem="DCp-qL-u6w" secondAttribute="bottom" constant="10" id="qbd-U4-Wy7"/>
+                                    <constraint firstAttribute="bottom" secondItem="DCp-qL-u6w" secondAttribute="bottom" constant="15" id="qbd-U4-Wy7"/>
                                     <constraint firstAttribute="height" constant="439" id="xaz-O3-uPf"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -245,8 +248,8 @@
                         <constraints>
                             <constraint firstItem="J8X-CY-3GB" firstAttribute="centerX" secondItem="tVt-zQ-Bap" secondAttribute="centerX" id="0La-f0-JJL"/>
                             <constraint firstItem="suB-6x-Fab" firstAttribute="centerX" secondItem="tVt-zQ-Bap" secondAttribute="centerX" id="1C8-KE-XmZ"/>
-                            <constraint firstItem="suB-6x-Fab" firstAttribute="top" secondItem="J8X-CY-3GB" secondAttribute="bottom" constant="54" id="KuL-R1-MbH"/>
-                            <constraint firstItem="J8X-CY-3GB" firstAttribute="top" secondItem="xe0-X8-osH" secondAttribute="bottom" constant="12" id="RYe-6D-k1p"/>
+                            <constraint firstItem="suB-6x-Fab" firstAttribute="top" secondItem="J8X-CY-3GB" secondAttribute="bottom" constant="39" id="KuL-R1-MbH"/>
+                            <constraint firstItem="J8X-CY-3GB" firstAttribute="top" secondItem="xe0-X8-osH" secondAttribute="bottom" constant="27" id="RYe-6D-k1p"/>
                             <constraint firstItem="cb6-sa-WCo" firstAttribute="top" secondItem="fkM-v6-KPT" secondAttribute="top" constant="14" id="SLU-PD-qEj"/>
                             <constraint firstItem="ETV-WY-u3P" firstAttribute="top" secondItem="cb6-sa-WCo" secondAttribute="bottom" constant="32" id="TKb-vc-fJM"/>
                             <constraint firstItem="cb6-sa-WCo" firstAttribute="centerX" secondItem="tVt-zQ-Bap" secondAttribute="centerX" id="TlE-Pl-AT5"/>
@@ -262,7 +265,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXs-oH-RHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="931.88405797101461" y="133.92857142857142"/>
+            <point key="canvasLocation" x="958" y="134"/>
+        </scene>
+        <!--InitialAccount-->
+        <scene sceneID="B1B-HF-SVS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InitialAccount" id="aJm-Hd-5pM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVV-rr-cUH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="-17"/>
         </scene>
     </scenes>
     <resources>
