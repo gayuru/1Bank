@@ -116,13 +116,47 @@ def users():
     user_schema = UserSchema(many=True)
     return user_schema.jsonify(users)
 
-#liza
+#get all acounts
 @application.route('/accounts', methods=['GET'])
 def accounts_get():
   if request.method == 'GET':
     tasks= BankAccount.query.all()
     result = bank_account_schema.load(tasks)
     return jsonify({'data': result})
+#get user
+@application.route('/users/:userId', methods=['GET'])
+def user_get():
+  if request.method == 'GET':
+    tasks = User.query.filter_by(request.body.id).first()
+    return tasks
+
+#user accounts
+@application.route('/users/:userId/accounts', methods=['GET'])
+def user_accounts_get():
+  if request.method == 'GET':
+    tasks= BankAccount.queryfilter_by(request.body.user_id).all
+    return tasks
+
+#get account by id
+@application.route('/accounts/:accId', methods=['GET'])
+def accid_accounts_get():
+  if request.method == 'GET':
+    tasks= BankAccount.queryfilter_by(request.body.id).all
+    return tasks
+
+#get all transactions by a specific account
+@application.route('/accounts/:accId/transactions', methods=['GET'])
+def transactions_accid_get():
+  if request.method == 'GET':
+    tasks= Transaction.queryfilter_by(request.body.bank_account_id).all
+    return tasks
+
+# #get all transactions by a specific account
+# @application.route('/accounts/:accId/transactions&filter=debit', methods=['GET'])
+# def transactions_accid_get():
+#   if request.method == 'GET':
+#     tasks= Transaction.queryfilter_by(request.body.bank_account_id).all
+#     return tasks
 
 if __name__ == '__main__':
   application.run()
