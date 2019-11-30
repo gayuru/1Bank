@@ -81,6 +81,8 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
                cell.balanceLabel.text = "$1279.00"
                cell.balanceLabel.textColor = UIColor.white
                cell.logo.image = UIImage(named: "")
+                cell.cardTypeImage.image = UIImage(named: "mastercard")
+                cell.bankImage.image = UIImage(named: "combank_logo")
                cell.contentView.backgroundColor = UIColor(red:1.00, green:0.80, blue:0.00, alpha:1.0)
                 break;
             case 2:
@@ -88,6 +90,8 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
             cell.totalBalanceLabel.text = ""
             cell.balanceLabel.text = "$4579.00"
             cell.balanceLabel.textColor = UIColor.white
+             cell.cardTypeImage.image = UIImage(named: "visa")
+             cell.bankImage.image = UIImage(named: "anz_logo")
             cell.logo.image = UIImage(named: "")
             cell.contentView.backgroundColor = UIColor(red:0.58, green:0.80, blue:1.00, alpha:1.0)
              break;
@@ -97,6 +101,8 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
             cell.totalBalanceLabel.text = ""
             cell.balanceLabel.text = "$6000.00"
             cell.balanceLabel.textColor = UIColor.white
+             cell.cardTypeImage.image = UIImage(named: "mastercard")
+                    cell.bankImage.image = UIImage(named: "nab_logo")
             cell.logo.image = UIImage(named: "")
             cell.contentView.backgroundColor = UIColor(red:0.75, green:0.05, blue:0.00, alpha:1.0)
              break;
@@ -105,6 +111,8 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
             cell.totalBalanceLabel.text = ""
             cell.balanceLabel.text = "$721.00"
             cell.balanceLabel.textColor = UIColor.white
+             cell.cardTypeImage.image = UIImage(named: "visa")
+             cell.bankImage.image = UIImage(named: "west_pac_logo")
             cell.logo.image = UIImage(named: "")
             cell.contentView.backgroundColor = UIColor(red:1.00, green:0.30, blue:0.44, alpha:1.0)
              break;
