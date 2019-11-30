@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--Transfer-->
+        <!--Dashboard-->
         <scene sceneID="QWg-vt-wWm">
             <objects>
-                <viewControllerPlaceholder storyboardName="Transfer" id="YtP-o9-a0u" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Dashboard" id="YtP-o9-a0u" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtF-jq-tf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="668" y="189"/>
