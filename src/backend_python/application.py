@@ -136,8 +136,8 @@ def user_get(userId):
 @application.route('/users/<userId>/accounts', methods=['GET'])
 def user_accounts_get(userId):
   if request.method == 'GET':
-    tasks= BankAccount.queryfilter_by(request.body.user_id).all
-    return tasks
+    accounts = BankAccount.query.filter_by(user_id = userId).all()
+    return bank_accounts_schema.jsonify(accounts)
 
 #get all accounts
 @application.route('/accounts', methods=['GET', 'POST'])
@@ -157,8 +157,8 @@ def accounts_get():
     accounts = BankAccount.query.all()
     return bank_accounts_schema.jsonify(accounts)
 
-@application.route('/accounts/close', methods=['POST'])
-def account_close():
+@application.route('/accounts/<accId>', methods=['DELETE'])
+def account_close(accId):
   pass
 
 #get account by id
@@ -169,11 +169,10 @@ def accid_accounts_get(accId):
     return bank_account_schema.jsonify(account)
 
 #get all transactions by a specific account
-@application.route('/accounts/:accId/transactions', methods=['GET'])
-def transactions_accid_get():
-  if request.method == 'GET':
-    tasks= Transaction.query.filter_by(request.body.bank_account_id).all()
-    return tasks
+@application.route('/accounts/<accId>/transactions', methods=['GET'])
+def transactions_accid_get(accId):
+  transactions = Transaction.query.filter_by(accId).all()
+  return transactions_schema.jsonify(transactions)
 
 @application.route('/transactions', methods=['POST', 'GET'])
 def transactions():
