@@ -25,6 +25,7 @@ class BankAccount(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   accountName = db.Column(db.String(200), unique=False, nullable=True)
   bankName = db.Column(db.String(200), unique=False, nullable=True)
+  verificationId = db.Column(db.String(200), unique=False, nullable=True)
 
   user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
   cards = db.relationship('Card', backref='bank_account', lazy = True)
@@ -57,6 +58,8 @@ class Card(db.Model):
 db.create_all()
 print("db created", flush=True)
 
+
+
 @application.route('/')
 def hello_world():
   return 'iSwift'
@@ -76,10 +79,9 @@ def users():
     users = User.query.all()
     return users
 
-
 #liza
 @application.route('/accounts', methods=['GET'])
-def users():
+def accounts_get():
   if request.method == 'GET':
     tasks= BankAccount.query.all()
     return tasks
