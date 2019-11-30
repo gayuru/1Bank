@@ -4,7 +4,6 @@ from flask_marshmallow import Marshmallow
 from config import SQLALCHEMY_DATABASE_URI
 import sys
 
-
 application = Flask(__name__)
 
 application.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
@@ -28,14 +27,13 @@ class User(db.Model):
     self.lastName = lastName
     self.password = password
 
-
-
 class BankAccount(db.Model):
   __tablename__='bank_accounts'
   id = db.Column(db.Integer, primary_key=True)
   accountName = db.Column(db.String(200), unique=False, nullable=True)
   bankName = db.Column(db.String(200), unique=False, nullable=True)
   verificationId = db.Column(db.String(200), unique=False, nullable=True)
+  accountType = db.Column(db.String(200), unique=False, nullable=True)
 
   user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
   cards = db.relationship('Card', backref='bank_accounts', lazy = True)
@@ -57,7 +55,6 @@ class TransactionGroup(db.Model):
   description = db.Column(db.String(200), unique= False)
 
   transaction_id = db.Column(db.Integer, db.ForeignKey('transactions.id'), nullable = False)
-
 
 
 class Card(db.Model):
@@ -91,12 +88,24 @@ class CardSchema(ma.ModelSchema):
 db.drop_all()
 db.create_all()
 
-print("db created", flush=True)
+user_schema = UserSchema()
+users_schema = UserSchema(many = True)
 
+bank_account_schema = BankAccountSchema()
+bank_accounts_schema = BankAccountSchema(many = True)
 
+transaction_schema = TransactionSchema()
+transactions_schema = TransactionSchema(many = True)
+
+transaction_group_schema = TransactionGroupSchema()
+transaction_groups_schema = TransactionGroupSchema(many = True)
+
+card_schema = CardSchema()
 @application.route('/')
 def hello_world():
   return 'iSwift'
+
+print("db created", flush=True)
 
 @application.route('/users', methods=['POST', 'GET'])
 def users():
@@ -106,57 +115,88 @@ def users():
     password = request.form['password']
 
     user = User(firstName=firstName, lastName=lastName, password=password)
-    user_schema = UserSchema()
     db.session.add(user)
     db.session.commit()
     user_schema.dump(user)
     return make_response('User created')
   elif request.method == 'GET':
     users = User.query.all()
-    user_schema = UserSchema(many=True)
-    return user_schema.jsonify(users)
+    return users_schema.jsonify(users)
 
-#get all acounts
-@application.route('/accounts', methods=['GET'])
-def accounts_get():
-  if request.method == 'GET':
-    tasks= BankAccount.query.all()
-    result = bank_account_schema.load(tasks)
-    return jsonify({'data': result})
+cards_schema = CardSchema(many = True)
+
 #get user
-@application.route('/users/:userId', methods=['GET'])
-def user_get():
+@application.route('/users/<userId>', methods=['GET'])
+def user_get(userId):
   if request.method == 'GET':
-    tasks = User.query.filter_by(request.body.id).first()
-    return tasks
+    user = User.query.filter_by(id = userId).first()
+    return user_schema.jsonify(user)
 
 #user accounts
-@application.route('/users/:userId/accounts', methods=['GET'])
-def user_accounts_get():
+@application.route('/users/<userId>/accounts', methods=['GET'])
+def user_accounts_get(userId):
   if request.method == 'GET':
     tasks= BankAccount.queryfilter_by(request.body.user_id).all
     return tasks
 
+#get all accounts
+@application.route('/accounts', methods=['GET', 'POST'])
+def accounts_get():
+  if request.method == 'POST':
+    accountName = request.form['accountName']
+    bankName = request.form['bankName']
+    verificationId = request.form['verificationId']
+    accountType = request.form['accountType']
+
+    account = BankAccount(accountName=accountName, bankName=bankName, verificationId=verificationId, accountType=accountType)
+    db.session.add(account)
+    db.session.commit()
+    bank_account_schema.dump(account)
+    return make_response('Account created')
+  elif request.method == 'GET':
+    accounts = BankAccount.query.all()
+    return bank_accounts_schema.jsonify(accounts)
+
+@application.route('/accounts/close', methods=['POST'])
+def account_close():
+  pass
+
 #get account by id
-@application.route('/accounts/:accId', methods=['GET'])
-def accid_accounts_get():
+@application.route('/accounts/<accId>', methods=['GET'])
+def accid_accounts_get(accId):
   if request.method == 'GET':
-    tasks= BankAccount.queryfilter_by(request.body.id).all
-    return tasks
+    account = BankAccount.query.filter_by(id = accId).first()
+    return bank_account_schema.jsonify(account)
 
 #get all transactions by a specific account
 @application.route('/accounts/:accId/transactions', methods=['GET'])
 def transactions_accid_get():
   if request.method == 'GET':
-    tasks= Transaction.queryfilter_by(request.body.bank_account_id).all
+    tasks= Transaction.query.filter_by(request.body.bank_account_id).all()
     return tasks
 
-# #get all transactions by a specific account
-# @application.route('/accounts/:accId/transactions&filter=debit', methods=['GET'])
-# def transactions_accid_get():
-#   if request.method == 'GET':
-#     tasks= Transaction.queryfilter_by(request.body.bank_account_id).all
-#     return tasks
+@application.route('/transactions', methods=['POST', 'GET'])
+def transactions():
+  if request.method == 'POST':
+    date = request.form['date']
+    amount = request.form['amount']
+
+    transaction = Transaction(date=date, amount=amount)
+    db.session.add(transaction)
+    db.session.commit()
+    transaction_schema.dump(transaction)
+    return make_response('Transaction created')
+  elif request.method == 'GET':
+    transactions = Transaction.query.all()
+    return transactions_schema.jsonify(transactions)
+
+#get transaction
+@application.route('/transactions/<transId>', methods=['GET'])
+def transaction_get(transId):
+  transaction = Transaction.query.filter_by(id = transId).first()
+  return transaction_schema.jsonify(transaction)
+
+
 
 if __name__ == '__main__':
   application.run()
