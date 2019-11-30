@@ -9,5 +9,7 @@ target 'OneBank' do
 	pod 'SVProgressHUD'
 	pod 'Alamofire', '~> 5.0.0-rc.3'
 	pod 'SwiftyJSON', '~> 4.0'
+	source 'https://github.com/CocoaPods/Specs.git'
+	pod 'FileBrowser', '~> 1.0'
 
 end

@@ -18,8 +18,16 @@ class InitialAccount_ViewController: UIViewController {
         existingBankBtn.layer.borderColor = UIColor(red:0.24, green:0.19, blue:0.75, alpha:1.0).cgColor
         // Do any additional setup after loading the view.
     }
-
-  
 }
 
-
+extension InitialAccount_ViewController{
+       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if(segue.identifier == "createAccount"){
+               let bankController = segue.destination as! SelectBank_ViewController
+               bankController.isOptionNew = true
+           }else if(segue.identifier == "existingAccount"){
+               let bankController = segue.destination as! SelectBank_ViewController
+               bankController.isOptionNew = false
+           }
+       }
+   }
