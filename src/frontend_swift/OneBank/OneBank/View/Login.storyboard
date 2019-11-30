@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="width" constant="180" id="yXO-wO-Jg5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="23"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Login    ">
                                     <color key="titleColor" red="0.2282530431" green="0.2149821455" blue="0.74427907120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -58,6 +58,9 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="YtP-o9-a0u" kind="showDetail" id="bOH-AO-7f9"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Jz-8w-pHD">
                                 <rect key="frame" x="67" y="370" width="347" height="46"/>
@@ -67,7 +70,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.2282530431" green="0.2149821455" blue="0.74427907120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="me3-2y-zZ1">
                                 <rect key="frame" x="67" y="456" width="347" height="46"/>
@@ -77,22 +80,29 @@
                                 </constraints>
                                 <color key="textColor" red="0.2282530431" green="0.2149821455" blue="0.74427907120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-FL-X1s">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-FL-X1s" userLabel="LineUsername">
                                 <rect key="frame" x="67" y="416" width="347" height="1"/>
                                 <color key="backgroundColor" red="0.5490196078431373" green="0.58039215686274503" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="z82-yI-iEE"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tec-wx-JkI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tec-wx-JkI" userLabel="LinePassword">
                                 <rect key="frame" x="67" y="499" width="347" height="1"/>
                                 <color key="backgroundColor" red="0.54901960780000003" green="0.58039215690000001" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="IxS-8y-vnJ"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal-arrow 1" translatesAutoresizingMaskIntoConstraints="NO" id="BMS-Ym-egJ">
+                                <rect key="frame" x="175" y="617" width="41" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="J11-3U-UdA"/>
+                                    <constraint firstAttribute="width" constant="41" id="vdo-6y-9iG"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -106,6 +116,7 @@
                             <constraint firstAttribute="trailing" secondItem="Tec-wx-JkI" secondAttribute="trailing" id="BJG-LG-AGt"/>
                             <constraint firstItem="a2b-cN-ISI" firstAttribute="top" secondItem="me3-2y-zZ1" secondAttribute="bottom" constant="104" id="Ffz-QZ-YY4"/>
                             <constraint firstItem="IPg-aN-bz5" firstAttribute="leading" secondItem="yho-iR-OSw" secondAttribute="leading" constant="67" id="LKm-ja-m8q"/>
+                            <constraint firstItem="BMS-Ym-egJ" firstAttribute="top" secondItem="a2b-cN-ISI" secondAttribute="bottom" constant="-40" id="PCa-xW-L50"/>
                             <constraint firstAttribute="trailing" secondItem="Wds-FL-X1s" secondAttribute="trailing" id="SCS-Va-cif"/>
                             <constraint firstItem="me3-2y-zZ1" firstAttribute="top" secondItem="4Jz-8w-pHD" secondAttribute="bottom" constant="40" id="W00-YS-cbB"/>
                             <constraint firstItem="v7G-AO-Nn0" firstAttribute="leading" secondItem="yho-iR-OSw" secondAttribute="leading" constant="67" id="WYN-9Y-FkZ"/>
@@ -113,6 +124,7 @@
                             <constraint firstItem="Tec-wx-JkI" firstAttribute="top" secondItem="me3-2y-zZ1" secondAttribute="bottom" constant="-3" id="gfq-Wn-wet"/>
                             <constraint firstItem="v7G-AO-Nn0" firstAttribute="top" secondItem="yho-iR-OSw" secondAttribute="top" constant="118" id="jqM-LY-bn5"/>
                             <constraint firstItem="Wds-FL-X1s" firstAttribute="width" secondItem="4Jz-8w-pHD" secondAttribute="width" id="ltJ-SD-f7j"/>
+                            <constraint firstItem="BMS-Ym-egJ" firstAttribute="leading" secondItem="a2b-cN-ISI" secondAttribute="trailing" constant="-72" id="s3p-nE-z1g"/>
                             <constraint firstItem="Wds-FL-X1s" firstAttribute="top" secondItem="4Jz-8w-pHD" secondAttribute="bottom" id="vvp-c3-JBd"/>
                             <constraint firstItem="VYk-HQ-VeZ" firstAttribute="top" secondItem="v7G-AO-Nn0" secondAttribute="bottom" constant="14" id="zf1-wp-YKc"/>
                         </constraints>
@@ -123,8 +135,17 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
+        <!--InitialAccount-->
+        <scene sceneID="QWg-vt-wWm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InitialAccount" id="YtP-o9-a0u" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtF-jq-tf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="189"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Logo" width="129" height="131"/>
+        <image name="diagonal-arrow 1" width="512" height="512"/>
     </resources>
 </document>
