@@ -13,5 +13,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var balanceType: UILabel!
     @IBOutlet weak var bankImage: UIImageView!
     @IBOutlet weak var cardTypeImage: UIImageView!
-    
+    @IBOutlet weak var totalBalance: UILabel!
+    @IBOutlet weak var totalBalanceLabel: UILabel!
+    @IBOutlet weak var logo: UIImageView!
 }
