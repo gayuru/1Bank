@@ -20,7 +20,7 @@ class User(db.Model):
   lastName = db.Column(db.String(200), unique=False, nullable=False)
   password = db.Column(db.String(200), unique=False,nullable=False)
 
-  bankAccounts = db.relationship("BankAccount", backref='users')
+  bankAccounts = db.relationship("BankAccount", backref='users', lazy='subquery')
 
 class BankAccount(db.Model):
   __tablename__='bank_accounts'
@@ -31,15 +31,15 @@ class BankAccount(db.Model):
   accountType = db.Column(db.String(200), unique=False, nullable=True)
   user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
-  cards = db.relationship('Card', backref='bank_accounts', lazy = 'joined')
-  transactions = db.relationship('Transaction', backref='bank_accounts', lazy = 'joined')
+  cards = db.relationship('Card', backref='bank_accounts', lazy = 'subquery')
+  transactions = db.relationship('Transaction', backref='bank_accounts', lazy = 'subquery')
 
 class TransactionGroup(db.Model):
   __tablename__='transaction_groups'
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(200), unique=False, nullable=False)
 
-  transactions = db.relationship('Transaction', backref='transaction_groups', lazy = True)
+  transactions = db.relationship('Transaction', backref='transaction_groups', lazy = 'subquery')
 
 class Transaction(db.Model):
   __tablename__='transactions'
