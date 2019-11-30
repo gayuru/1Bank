@@ -17,7 +17,6 @@
 		557EA79423921C24000AD213 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557EA79323921C24000AD213 /* Login.storyboard */; };
 		557EA79723922494000AD213 /* InitialAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557EA79623922494000AD213 /* InitialAccount.storyboard */; };
 		557EA799239228DC000AD213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557EA798239228DC000AD213 /* Assets.xcassets */; };
-		557EA79B23922E76000AD213 /* InitialAccount_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557EA79A23922E76000AD213 /* InitialAccount_ViewController.swift */; };
 		55A712262392822D00908EF0 /* SelectBank_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A712252392822D00908EF0 /* SelectBank_ViewController.swift */; };
 		55A712282392823F00908EF0 /* ExistingAccount_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A712272392823F00908EF0 /* ExistingAccount_ViewController.swift */; };
 		55C58800238FC36F00A6DC85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C587FF238FC36F00A6DC85 /* AppDelegate.swift */; };
@@ -29,10 +28,15 @@
 		77BBCAB523920E8600F5605E /* DashboadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BBCAB423920E8600F5605E /* DashboadViewController.swift */; };
 		77BBCAB82392243400F5605E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BBCAB72392243400F5605E /* CardCollectionViewCell.swift */; };
 		77DEEF54239246F2001A808F /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DEEF53239246F2001A808F /* ServicesCollectionViewCell.swift */; };
-		77DEEF57239254BE001A808F /* InitialAccount_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DEEF56239254BD001A808F /* InitialAccount_ViewController.swift */; };
 		77DEEF592392567F001A808F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DEEF582392567F001A808F /* LoginViewController.swift */; };
 		77DEEF5B23925832001A808F /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DEEF5A23925832001A808F /* TransactionsTableViewCell.swift */; };
 		77DEEF5D239292C3001A808F /* MainServices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DEEF5C239292C3001A808F /* MainServices.storyboard */; };
+		77DEEF5F2392B26F001A808F /* MainServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DEEF5E2392B26F001A808F /* MainServicesViewController.swift */; };
+		77DEEF612392B8D5001A808F /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DEEF602392B8D5001A808F /* Account.storyboard */; };
+		77DEEF632392B90D001A808F /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DEEF622392B90D001A808F /* AccountViewController.swift */; };
+		77DEEF652392BD5B001A808F /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DEEF642392BD5B001A808F /* Accounts.storyboard */; };
+		77DEEF672392BD76001A808F /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DEEF662392BD76001A808F /* AccountsViewController.swift */; };
+		77DEEF692392C062001A808F /* AccountsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DEEF682392C062001A808F /* AccountsCollectionViewCell.swift */; };
 		E602DA63F9F648FB8C7169D4 /* Pods_OneBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C5B6FB31C1C0F7625ED260 /* Pods_OneBank.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,10 +67,15 @@
 		77BBCAB423920E8600F5605E /* DashboadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboadViewController.swift; sourceTree = "<group>"; };
 		77BBCAB72392243400F5605E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		77DEEF53239246F2001A808F /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
-		77DEEF56239254BD001A808F /* InitialAccount_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialAccount_ViewController.swift; sourceTree = "<group>"; };
 		77DEEF582392567F001A808F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		77DEEF5A23925832001A808F /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
 		77DEEF5C239292C3001A808F /* MainServices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainServices.storyboard; sourceTree = "<group>"; };
+		77DEEF5E2392B26F001A808F /* MainServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainServicesViewController.swift; sourceTree = "<group>"; };
+		77DEEF602392B8D5001A808F /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		77DEEF622392B90D001A808F /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		77DEEF642392BD5B001A808F /* Accounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
+		77DEEF662392BD76001A808F /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		77DEEF682392C062001A808F /* AccountsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCollectionViewCell.swift; sourceTree = "<group>"; };
 		B42CF4AAFB6C5C4F7DCE17EA /* Pods-OneBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBank.debug.xcconfig"; path = "Target Support Files/Pods-OneBank/Pods-OneBank.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1E0175D9ECAF7B8E0ABF5C /* Pods-OneBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBank.release.xcconfig"; path = "Target Support Files/Pods-OneBank/Pods-OneBank.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +150,6 @@
 		55C58813238FC3D200A6DC85 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				77DEEF56239254BD001A808F /* InitialAccount_ViewController.swift */,
 				55C58803238FC36F00A6DC85 /* ViewController.swift */,
 				557EA79A23922E76000AD213 /* InitialAccount_ViewController.swift */,
 				5522CC5B23925613008DC260 /* CreateAccount_ViewController.swift */,
@@ -152,6 +160,10 @@
 				77DEEF53239246F2001A808F /* ServicesCollectionViewCell.swift */,
 				77DEEF582392567F001A808F /* LoginViewController.swift */,
 				77DEEF5A23925832001A808F /* TransactionsTableViewCell.swift */,
+				77DEEF5E2392B26F001A808F /* MainServicesViewController.swift */,
+				77DEEF622392B90D001A808F /* AccountViewController.swift */,
+				77DEEF662392BD76001A808F /* AccountsViewController.swift */,
+				77DEEF682392C062001A808F /* AccountsCollectionViewCell.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -173,6 +185,8 @@
 				557EA79323921C24000AD213 /* Login.storyboard */,
 				557EA79623922494000AD213 /* InitialAccount.storyboard */,
 				77DEEF5C239292C3001A808F /* MainServices.storyboard */,
+				77DEEF602392B8D5001A808F /* Account.storyboard */,
+				77DEEF642392BD5B001A808F /* Accounts.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,7 +277,9 @@
 				55C5880C238FC37100A6DC85 /* LaunchScreen.storyboard in Resources */,
 				55C58807238FC36F00A6DC85 /* Main.storyboard in Resources */,
 				5547C90C23920C5100FFD5A4 /* Proxima Nova Extrabold.otf in Resources */,
+				77DEEF612392B8D5001A808F /* Account.storyboard in Resources */,
 				557EA79423921C24000AD213 /* Login.storyboard in Resources */,
+				77DEEF652392BD5B001A808F /* Accounts.storyboard in Resources */,
 				5547C90823920C5100FFD5A4 /* Proxima Nova Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,11 +335,14 @@
 			files = (
 				5522CC5A23923BF8008DC260 /* GradientButton.swift in Sources */,
 				5522CC5C23925613008DC260 /* CreateAccount_ViewController.swift in Sources */,
+				77DEEF632392B90D001A808F /* AccountViewController.swift in Sources */,
+				77DEEF5F2392B26F001A808F /* MainServicesViewController.swift in Sources */,
+				77DEEF692392C062001A808F /* AccountsCollectionViewCell.swift in Sources */,
 				55A712262392822D00908EF0 /* SelectBank_ViewController.swift in Sources */,
 				77DEEF5B23925832001A808F /* TransactionsTableViewCell.swift in Sources */,
 				77DEEF54239246F2001A808F /* ServicesCollectionViewCell.swift in Sources */,
+				77DEEF672392BD76001A808F /* AccountsViewController.swift in Sources */,
 				77BBCAB523920E8600F5605E /* DashboadViewController.swift in Sources */,
-				77DEEF57239254BE001A808F /* InitialAccount_ViewController.swift in Sources */,
 				55C58804238FC36F00A6DC85 /* ViewController.swift in Sources */,
 				77DEEF592392567F001A808F /* LoginViewController.swift in Sources */,
 				55C58800238FC36F00A6DC85 /* AppDelegate.swift in Sources */,

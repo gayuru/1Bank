@@ -40,13 +40,13 @@ class DashboadViewController: UIViewController {
 }
 
 extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataSource{
-
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == cardCollectionView{
             return 5
         }else{
-            return 8
+            return 4
         }
         
     }
@@ -68,7 +68,7 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
                 cell.cardTypeImage.image = UIImage(named: "")
                 cell.bankImage.image = UIImage(named: "")
                 cell.balanceLabel.numberOfLines = 1
-//                cell.frame.origin.y = 40
+                cell.frame.origin.y = 40
             }
             
             return cell
@@ -79,6 +79,13 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
             return cell
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == servicesCollectionView{
+            performSegue(withIdentifier: "goToAccount", sender: self)
+        }
+    }
+    
 }
 
 
