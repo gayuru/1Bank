@@ -21,6 +21,14 @@ class LoginViewController: UIViewController {
            view.endEditing(true)
     }
 
+    
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
+    
+    @IBAction func loginAction(_ sender: Any) {
+        Globals.username = usernameField.text!
+    }
+    
     /*
     // MARK: - Navigation
 
