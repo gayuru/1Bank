@@ -77,6 +77,12 @@ def users():
     tasks= BankAccount.query.all()
     return tasks
 
+#liza
+@application.route('/users/:userId', methods=['GET'])
+def users():
+  if request.method == 'GET':
+    tasks= User.query.
+    return tasks
 
 
 if __name__ == '__main__':
