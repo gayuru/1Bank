@@ -32,6 +32,7 @@
 		77DEEF57239254BE001A808F /* InitialAccount_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DEEF56239254BD001A808F /* InitialAccount_ViewController.swift */; };
 		77DEEF592392567F001A808F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DEEF582392567F001A808F /* LoginViewController.swift */; };
 		77DEEF5B23925832001A808F /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DEEF5A23925832001A808F /* TransactionsTableViewCell.swift */; };
+		77DEEF5D239292C3001A808F /* MainServices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DEEF5C239292C3001A808F /* MainServices.storyboard */; };
 		E602DA63F9F648FB8C7169D4 /* Pods_OneBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C5B6FB31C1C0F7625ED260 /* Pods_OneBank.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		77DEEF56239254BD001A808F /* InitialAccount_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialAccount_ViewController.swift; sourceTree = "<group>"; };
 		77DEEF582392567F001A808F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		77DEEF5A23925832001A808F /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
+		77DEEF5C239292C3001A808F /* MainServices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainServices.storyboard; sourceTree = "<group>"; };
 		B42CF4AAFB6C5C4F7DCE17EA /* Pods-OneBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBank.debug.xcconfig"; path = "Target Support Files/Pods-OneBank/Pods-OneBank.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1E0175D9ECAF7B8E0ABF5C /* Pods-OneBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBank.release.xcconfig"; path = "Target Support Files/Pods-OneBank/Pods-OneBank.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 				7718B7CF2391F6500004BFA4 /* Dashboard.storyboard */,
 				557EA79323921C24000AD213 /* Login.storyboard */,
 				557EA79623922494000AD213 /* InitialAccount.storyboard */,
+				77DEEF5C239292C3001A808F /* MainServices.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				7718B7D02391F6500004BFA4 /* Dashboard.storyboard in Resources */,
 				5547C90B23920C5100FFD5A4 /* Proxima Nova Bold.otf in Resources */,
 				557EA799239228DC000AD213 /* Assets.xcassets in Resources */,
+				77DEEF5D239292C3001A808F /* MainServices.storyboard in Resources */,
 				5547C90A23920C5100FFD5A4 /* ProximaNova-Regular.otf in Resources */,
 				5547C90923920C5100FFD5A4 /* Proxima Nova Thin.otf in Resources */,
 				557EA79723922494000AD213 /* InitialAccount.storyboard in Resources */,
