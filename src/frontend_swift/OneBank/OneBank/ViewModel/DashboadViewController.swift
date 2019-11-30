@@ -15,6 +15,7 @@ class DashboadViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var cardCollectionView: UICollectionView!
     @IBOutlet weak var servicesCollectionView: UICollectionView!
+    @IBOutlet weak var transactionsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -22,6 +23,8 @@ class DashboadViewController: UIViewController {
         cardCollectionView.dataSource = self
         servicesCollectionView.delegate = self
         servicesCollectionView.dataSource = self
+        transactionsTableView.delegate = self
+        transactionsTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
@@ -77,11 +80,17 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
 
 extension DashboadViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell.init()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as! TransactionsTableViewCell
+        
+        cell.companyNameLabel.text = "Spotify"
+        cell.amountSpendLabel.text = "$200.0"
+        cell.timeAgoLabel.text = "5 hours ago"
+        cell.categoryView.layer.cornerRadius = cell.categoryView.frame.size.width / 2
+        return cell
     }
     
     

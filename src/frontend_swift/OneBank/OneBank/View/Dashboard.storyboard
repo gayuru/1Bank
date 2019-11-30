@@ -241,13 +241,63 @@
                                 <rect key="frame" x="20" y="640" width="374" height="222"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bTs-SW-U8w">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transactionCell" rowHeight="92" id="bTs-SW-U8w" customClass="TransactionsTableViewCell" customModule="OneBank" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bTs-SW-U8w" id="Nmg-fV-wGn">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="92"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-xe-hyu">
+                                                    <rect key="frame" x="20" y="11" width="67" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gii-5P-ovh">
+                                                    <rect key="frame" x="95" y="11" width="181" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpP-8u-U0u">
+                                                    <rect key="frame" x="95" y="36" width="185" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSK-0d-MHd">
+                                                    <rect key="frame" x="284" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z04-iv-Xlq">
+                                                    <rect key="frame" x="334" y="17" width="8" height="8"/>
+                                                    <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="8" id="VWo-zk-MPY"/>
+                                                        <constraint firstAttribute="height" constant="8" id="Xr8-S2-0Cu"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="sYT-52-uEs"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="z04-iv-Xlq" secondAttribute="trailing" constant="32" id="H2G-lf-jhM"/>
+                                                <constraint firstItem="ZSK-0d-MHd" firstAttribute="top" secondItem="Nmg-fV-wGn" secondAttribute="top" constant="11" id="a3y-LP-Xdp"/>
+                                                <constraint firstItem="z04-iv-Xlq" firstAttribute="top" secondItem="Nmg-fV-wGn" secondAttribute="top" constant="17" id="dKR-Xl-t2L"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZSK-0d-MHd" secondAttribute="bottom" constant="60" id="fNt-vu-CUB"/>
+                                                <constraint firstItem="z04-iv-Xlq" firstAttribute="leading" secondItem="ZSK-0d-MHd" secondAttribute="trailing" constant="8" id="vEg-YK-0SC"/>
+                                                <constraint firstAttribute="bottom" secondItem="z04-iv-Xlq" secondAttribute="bottom" constant="67" id="vc5-xi-FaC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountSpendLabel" destination="ZSK-0d-MHd" id="n66-Ie-FB9"/>
+                                            <outlet property="categoryView" destination="z04-iv-Xlq" id="Eaq-d7-hww"/>
+                                            <outlet property="companyLogo" destination="eGC-xe-hyu" id="GoK-Xo-qwj"/>
+                                            <outlet property="companyNameLabel" destination="gii-5P-ovh" id="HRz-vG-NTM"/>
+                                            <outlet property="timeAgoLabel" destination="JpP-8u-U0u" id="4GL-1Z-wwk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -290,6 +340,7 @@
                         <outlet property="profileImage" destination="DXe-Iq-nKJ" id="MIp-1v-sw3"/>
                         <outlet property="servicesCollectionView" destination="hKJ-3l-DVS" id="sEc-eP-BUo"/>
                         <outlet property="setttingsView" destination="HYC-kB-aPS" id="LHO-Ct-URA"/>
+                        <outlet property="transactionsTableView" destination="w7N-Tw-z74" id="N6Q-AJ-WN9"/>
                         <outlet property="usernameLabel" destination="pRp-YT-CkY" id="XaW-fu-NEa"/>
                     </connections>
                 </viewController>
