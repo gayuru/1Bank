@@ -100,12 +100,18 @@ def user_accounts_get():
     tasks= BankAccount.queryfilter_by(request.body.user_id).all
     return tasks
 
-#get account by id 
+#get account by id
 @application.route('/accounts/:accId', methods=['GET'])
 def accid_accounts_get():
   if request.method == 'GET':
     tasks= BankAccount.queryfilter_by(request.body.id).all
     return tasks
 
+#get account by id
+@application.route('/accounts/:accId/transactions', methods=['GET'])
+def transactions_accid_get():
+  if request.method == 'GET':
+    tasks= Transaction.queryfilter_by(request.body.bank_account_id).all
+    return tasks
 if __name__ == '__main__':
   application.run()
