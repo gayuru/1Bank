@@ -159,7 +159,7 @@ def accounts_get():
 
 @application.route('/accounts/<accId>', methods=['DELETE'])
 def account_close(accId):
-  pass
+  delete = User.query.filter_by(id = accId).delete()
 
 #get account by id
 @application.route('/accounts/<accId>', methods=['GET'])
