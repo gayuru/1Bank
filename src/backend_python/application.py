@@ -20,7 +20,7 @@ class User(db.Model):
   lastName = db.Column(db.String(200), unique=False, nullable=False)
   password = db.Column(db.String(200), unique=False,nullable=False)
 
-  bankAccounts = db.relationship("BankAccount", backref='users', lazy='subquery')
+  bankAccounts = db.relationship("BankAccount", backref='users', lazy='joined')
 
 class BankAccount(db.Model):
   __tablename__='bank_accounts'
@@ -31,15 +31,15 @@ class BankAccount(db.Model):
   accountType = db.Column(db.String(200), unique=False, nullable=True)
   user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
-  cards = db.relationship('Card', backref='bank_accounts', lazy = 'subquery')
-  transactions = db.relationship('Transaction', backref='bank_accounts', lazy = 'subquery')
+  cards = db.relationship('Card', backref='bank_accounts', lazy = 'joined')
+  transactions = db.relationship('Transaction', backref='bank_accounts', lazy = 'joined')
 
 class TransactionGroup(db.Model):
   __tablename__='transaction_groups'
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(200), unique=False, nullable=False)
 
-  transactions = db.relationship('Transaction', backref='transaction_groups', lazy = 'subquery')
+  transactions = db.relationship('Transaction', backref='transaction_groups', lazy = 'joined')
 
 class Transaction(db.Model):
   __tablename__='transactions'
@@ -207,6 +207,7 @@ def addSampleData():
 
   for model in all:
     for entry in model[0]:
+      print(entry, flush=True)
       db.session.add(entry)
       db.session.commit()
       model[1].dump(entry)
@@ -219,6 +220,7 @@ print("db created", flush=True)
 def index():
   return 'iSwift'
 
+# Get all users and add users
 @application.route('/users', methods=['POST', 'GET'])
 def users():
   if request.method == 'POST':
@@ -235,21 +237,21 @@ def users():
     users = User.query.all()
     return users_schema.jsonify(users)
 
-#get user
+# Get a specific user
 @application.route('/users/<userId>', methods=['GET'])
 def user_get(userId):
   if request.method == 'GET':
     user = User.query.filter_by(id = userId).first()
     return user_schema.jsonify(user)
 
-#user accounts
+# Get all accounts of a specific user
 @application.route('/users/<userId>/accounts', methods=['GET'])
 def user_accounts_get(userId):
   if request.method == 'GET':
     accounts = BankAccount.query.filter_by(user_id = userId).all()
     return bank_accounts_schema.jsonify(accounts)
 
-#get all accounts
+# Get all accounts and add an account
 @application.route('/accounts', methods=['GET', 'POST'])
 def accounts_get():
   if request.method == 'POST':
@@ -268,6 +270,7 @@ def accounts_get():
     accounts = BankAccount.query.all()
     return bank_accounts_schema.jsonify(accounts)
 
+# Close an account by account id
 @application.route('/accounts/<accId>', methods=['DELETE'])
 def account_close(accId):
   task_to_delete = BankAccount.query.get_or_404(accId)
@@ -278,19 +281,20 @@ def account_close(accId):
   except:
     return 'there was an issue adding the data'
 
-#get account by id
+# Get a specific account by ID
 @application.route('/accounts/<accId>', methods=['GET'])
 def accid_accounts_get(accId):
   if request.method == 'GET':
     account = BankAccount.query.filter_by(id = accId).first()
     return bank_account_schema.jsonify(account)
 
-#get all transactions by a specific account
+# Get all transactions of a specific account
 @application.route('/accounts/<accId>/transactions', methods=['GET'])
 def transactions_accid_get(accId):
   transactions = Transaction.query.filter_by(accId).all()
   return transactions_schema.jsonify(transactions)
 
+# Get all transactions and add a transaction
 @application.route('/transactions', methods=['POST', 'GET'])
 def transactions():
   if request.method == 'POST':
@@ -310,7 +314,7 @@ def transactions():
     transactions = Transaction.query.all()
     return transactions_schema.jsonify(transactions)
 
-#get transaction
+# Get a specific transaction by ID
 @application.route('/transactions/<transId>', methods=['GET'])
 def transaction_get(transId):
   transaction = Transaction.query.filter_by(id = transId).first()

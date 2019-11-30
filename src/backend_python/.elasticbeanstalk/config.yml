@@ -1,2 +1,22 @@
+branch-defaults:
+  default:
+    environment: iswift-dev
+    group_suffix: null
+environment-defaults:
+  iswift-dev:
+    branch: null
+    repository: null
 global:
+  application_name: backend_python
+  branch: null
+  default_ec2_keyname: null
+  default_platform: python
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
   profile: null
+  repository: null
+  sc: null
+  workspace_type: Application
