@@ -207,8 +207,6 @@ def addSampleData():
 print("db created", flush=True)
 
 
-
-
 @application.route('/')
 def index():
   return 'iSwift'
