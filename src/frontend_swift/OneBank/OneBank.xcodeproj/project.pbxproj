@@ -14,6 +14,7 @@
 		55C58809238FC37100A6DC85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C58808238FC37100A6DC85 /* Assets.xcassets */; };
 		55C5880C238FC37100A6DC85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5880A238FC37100A6DC85 /* LaunchScreen.storyboard */; };
 		7718B7D02391F6500004BFA4 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7718B7CF2391F6500004BFA4 /* Dashboard.storyboard */; };
+		77BBCAB523920E8600F5605E /* DashboadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BBCAB423920E8600F5605E /* DashboadViewController.swift */; };
 		E602DA63F9F648FB8C7169D4 /* Pods_OneBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C5B6FB31C1C0F7625ED260 /* Pods_OneBank.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		55C5880B238FC37100A6DC85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55C5880D238FC37100A6DC85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7718B7CF2391F6500004BFA4 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		77BBCAB423920E8600F5605E /* DashboadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboadViewController.swift; sourceTree = "<group>"; };
 		B42CF4AAFB6C5C4F7DCE17EA /* Pods-OneBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBank.debug.xcconfig"; path = "Target Support Files/Pods-OneBank/Pods-OneBank.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1E0175D9ECAF7B8E0ABF5C /* Pods-OneBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneBank.release.xcconfig"; path = "Target Support Files/Pods-OneBank/Pods-OneBank.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				55C58803238FC36F00A6DC85 /* ViewController.swift */,
+				77BBCAB423920E8600F5605E /* DashboadViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77BBCAB523920E8600F5605E /* DashboadViewController.swift in Sources */,
 				55C58804238FC36F00A6DC85 /* ViewController.swift in Sources */,
 				55C58800238FC36F00A6DC85 /* AppDelegate.swift in Sources */,
 				55C58802238FC36F00A6DC85 /* SceneDelegate.swift in Sources */,
@@ -382,13 +386,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56CT9TQ9TD;
+				DEVELOPMENT_TEAM = 6XNC2755U2;
 				INFOPLIST_FILE = OneBank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iSwift.OneBank;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sogyal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -401,13 +405,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56CT9TQ9TD;
+				DEVELOPMENT_TEAM = 6XNC2755U2;
 				INFOPLIST_FILE = OneBank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iSwift.OneBank;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sogyal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
