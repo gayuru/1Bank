@@ -195,8 +195,9 @@ def accounts_get():
     bankName = request.form['bankName']
     verificationId = request.form['verificationId']
     accountType = request.form['accountType']
+    userId = int(request.form['userId'])
 
-    account = BankAccount(accountName=accountName, bankName=bankName, verificationId=verificationId, accountType=accountType)
+    account = BankAccount(accountName=accountName, bankName=bankName, verificationId=verificationId, accountType=accountType, user_id=userId)
     db.session.add(account)
     db.session.commit()
     bank_account_schema.dump(account)
@@ -207,7 +208,13 @@ def accounts_get():
 
 @application.route('/accounts/<accId>', methods=['DELETE'])
 def account_close(accId):
-  delete = User.query.filter_by(id = accId).delete()
+  task_to_delete = BankAccount.query.get_or_404(accId)
+  try:
+    db.session.delete(task_to_delete)
+    db.session.commit()
+    return 'Congrats'
+  except:
+    return 'there was an issue adding the data'
 
 #get account by id
 @application.route('/accounts/<accId>', methods=['GET'])
@@ -227,8 +234,8 @@ def transactions():
   if request.method == 'POST':
     date = request.form['date']
     amount = request.form['amount']
-
-    transaction = Transaction(date=date, amount=amount)
+    bankAccountId = int(request.form['bankAccountId'])
+    transaction = Transaction(date=date, amount=amount, bank_account_id=bankAccountId)
     db.session.add(transaction)
     db.session.commit()
     transaction_schema.dump(transaction)
