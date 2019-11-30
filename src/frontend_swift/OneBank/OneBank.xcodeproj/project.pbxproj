@@ -14,6 +14,7 @@
 		5547C90A23920C5100FFD5A4 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90523920C5100FFD5A4 /* ProximaNova-Regular.otf */; };
 		5547C90B23920C5100FFD5A4 /* Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90623920C5100FFD5A4 /* Proxima Nova Bold.otf */; };
 		5547C90C23920C5100FFD5A4 /* Proxima Nova Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5547C90723920C5100FFD5A4 /* Proxima Nova Extrabold.otf */; };
+		555CDDE92392C42F00ACB302 /* CloseConfirmation_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555CDDE82392C42F00ACB302 /* CloseConfirmation_ViewController.swift */; };
 		557EA79423921C24000AD213 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557EA79323921C24000AD213 /* Login.storyboard */; };
 		557EA79723922494000AD213 /* InitialAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557EA79623922494000AD213 /* InitialAccount.storyboard */; };
 		557EA799239228DC000AD213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557EA798239228DC000AD213 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		55C5880C238FC37100A6DC85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5880A238FC37100A6DC85 /* LaunchScreen.storyboard */; };
 		55D8B9FE2392B25F008E7371 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8B9FD2392B25F008E7371 /* Globals.swift */; };
 		55D8BA002392B40A008E7371 /* CloseBankAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D8B9FF2392B40A008E7371 /* CloseBankAccount.storyboard */; };
+		55D8BA022392BDD6008E7371 /* CloseAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8BA012392BDD6008E7371 /* CloseAccountViewController.swift */; };
 		7718B7D02391F6500004BFA4 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7718B7CF2391F6500004BFA4 /* Dashboard.storyboard */; };
 		77BBCAB523920E8600F5605E /* DashboadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BBCAB423920E8600F5605E /* DashboadViewController.swift */; };
 		77BBCAB82392243400F5605E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BBCAB72392243400F5605E /* CardCollectionViewCell.swift */; };
@@ -46,6 +48,7 @@
 		5547C90623920C5100FFD5A4 /* Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Bold.otf"; path = "OneBank/Assets.xcassets/Proxima Nova Bold.otf"; sourceTree = SOURCE_ROOT; };
 		5547C90723920C5100FFD5A4 /* Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Extrabold.otf"; path = "OneBank/Assets.xcassets/Proxima Nova Extrabold.otf"; sourceTree = SOURCE_ROOT; };
 		5550D7812392721E00580A9E /* OneBank.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneBank.entitlements; sourceTree = "<group>"; };
+		555CDDE82392C42F00ACB302 /* CloseConfirmation_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseConfirmation_ViewController.swift; sourceTree = "<group>"; };
 		557EA79323921C24000AD213 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		557EA79623922494000AD213 /* InitialAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialAccount.storyboard; sourceTree = "<group>"; };
 		557EA798239228DC000AD213 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		55C5880D238FC37100A6DC85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55D8B9FD2392B25F008E7371 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		55D8B9FF2392B40A008E7371 /* CloseBankAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CloseBankAccount.storyboard; sourceTree = "<group>"; };
+		55D8BA012392BDD6008E7371 /* CloseAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseAccountViewController.swift; sourceTree = "<group>"; };
 		7718B7CF2391F6500004BFA4 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		77BBCAB423920E8600F5605E /* DashboadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboadViewController.swift; sourceTree = "<group>"; };
 		77BBCAB72392243400F5605E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				77DEEF53239246F2001A808F /* ServicesCollectionViewCell.swift */,
 				77DEEF582392567F001A808F /* LoginViewController.swift */,
 				77DEEF5A23925832001A808F /* TransactionsTableViewCell.swift */,
+				55D8BA012392BDD6008E7371 /* CloseAccountViewController.swift */,
+				555CDDE82392C42F00ACB302 /* CloseConfirmation_ViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -321,9 +327,11 @@
 			files = (
 				5522CC5A23923BF8008DC260 /* GradientButton.swift in Sources */,
 				5522CC5C23925613008DC260 /* CreateAccount_ViewController.swift in Sources */,
+				555CDDE92392C42F00ACB302 /* CloseConfirmation_ViewController.swift in Sources */,
 				55A712262392822D00908EF0 /* SelectBank_ViewController.swift in Sources */,
 				77DEEF5B23925832001A808F /* TransactionsTableViewCell.swift in Sources */,
 				77DEEF54239246F2001A808F /* ServicesCollectionViewCell.swift in Sources */,
+				55D8BA022392BDD6008E7371 /* CloseAccountViewController.swift in Sources */,
 				77BBCAB523920E8600F5605E /* DashboadViewController.swift in Sources */,
 				77DEEF57239254BE001A808F /* InitialAccount_ViewController.swift in Sources */,
 				55C58804238FC36F00A6DC85 /* ViewController.swift in Sources */,
