@@ -12,4 +12,5 @@ class ServicesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var serviceLabel: UILabel!
     @IBOutlet weak var serviceImage: UIImageView!
+    @IBOutlet weak var servicesView: UIView!
 }

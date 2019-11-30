@@ -18,6 +18,8 @@ class DashboadViewController: UIViewController {
     @IBOutlet weak var transactionsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
+        transactionsTableView.allowsSelection = false
         setup()
         cardCollectionView.delegate = self
         cardCollectionView.dataSource = self
@@ -25,6 +27,8 @@ class DashboadViewController: UIViewController {
         servicesCollectionView.dataSource = self
         transactionsTableView.delegate = self
         transactionsTableView.dataSource = self
+        cardCollectionView.backgroundColor = UIColor.clear
+        servicesCollectionView.backgroundColor = UIColor.clear
         // Do any additional setup after loading the view.
     }
     
@@ -36,13 +40,13 @@ class DashboadViewController: UIViewController {
 }
 
 extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataSource{
-
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == cardCollectionView{
             return 5
         }else{
-            return 8
+            return 4
         }
         
     }
@@ -64,17 +68,24 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
                 cell.cardTypeImage.image = UIImage(named: "")
                 cell.bankImage.image = UIImage(named: "")
                 cell.balanceLabel.numberOfLines = 1
-                cell.frame.origin.y = 50
+                cell.frame.origin.y = 40
             }
             
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "servicesCell", for: indexPath) as! ServicesCollectionViewCell
-//            cell.backgroundView?.backgroundColor = UIColor(red: 224, green: 236, blue: 255)
-//            cell.backgroundView.backgroundColor = UIColor(red: 224, green: 236, blue: 255)
+            cell.servicesView.backgroundColor = UIColor(red: 224, green: 236, blue: 255)
+            cell.layer.cornerRadius = 10
             return cell
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == servicesCollectionView{
+            performSegue(withIdentifier: "goToAccount", sender: self)
+        }
+    }
+    
 }
 
 
@@ -85,7 +96,7 @@ extension DashboadViewController: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as! TransactionsTableViewCell
-        
+        cell.companyLogo.image = UIImage(named: "spotify")
         cell.companyNameLabel.text = "Spotify"
         cell.amountSpendLabel.text = "$200.0"
         cell.timeAgoLabel.text = "5 hours ago"
