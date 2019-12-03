@@ -82,9 +82,6 @@
                                 <color key="textColor" red="0.2282530431" green="0.2149821455" blue="0.74427907120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                <connections>
-                                    <action selector="passwordField:" destination="tk9-9s-JmK" eventType="editingDidEnd" id="FmH-YP-awH"/>
-                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-FL-X1s" userLabel="LineUsername">
                                 <rect key="frame" x="67" y="416" width="347" height="1"/>
@@ -149,7 +146,7 @@
                 <viewControllerPlaceholder storyboardName="Dashboard" id="YtP-o9-a0u" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtF-jq-tf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="189"/>
+            <point key="canvasLocation" x="780" y="138"/>
         </scene>
     </scenes>
     <resources>

@@ -10,24 +10,32 @@ import UIKit
 
 class LoginViewController: UIViewController {
  
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
-        let userTappedOtherThanKeyboard: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector(("closeKeyboard")))
-        view.addGestureRecognizer(userTappedOtherThanKeyboard)
         
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector(("closeKeyboard")))
+        
+          //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+//          tap.cancelsTouchesInView = false
+
+          view.addGestureRecognizer(tap)
+//        let userTappedOtherThanKeyboard: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector(("closeKeyboard")))
+//        view.addGestureRecognizer(userTappedOtherThanKeyboard)
+//        
         // Do any additional setup after loading the view.
     }
     
     @objc func closeKeyboard() {
-           view.endEditing(true)
+       view.endEditing(true)
     }
 
     
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var usernameField: UITextField!
-    
+   
     @IBAction func loginAction(_ sender: Any) {
         Globals.username = usernameField.text!
     }

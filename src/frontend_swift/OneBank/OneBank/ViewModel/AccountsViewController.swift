@@ -42,15 +42,14 @@ extension AccountsViewController:UICollectionViewDelegate,UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "accountCell", for: indexPath) as! AccountsCollectionViewCell
-        if indexPath.row / 2 == 0{
+        if indexPath.row / 2 == 0 {
             cell.bankNameLabel.text = "Commonwealth Bank"
             cell.accountImage.image = UIImage(named: "combank_logo")
         }else{
             cell.bankNameLabel.text = "NAB"
             cell.accountImage.image = UIImage(named: "nab_logo")
         }
-        
-      
+
         cell.bankBalance.text = "$300.00"
         return cell
     }

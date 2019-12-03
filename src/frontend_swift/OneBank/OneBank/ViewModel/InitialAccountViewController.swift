@@ -10,9 +10,11 @@ import UIKit
 class InitialAccountViewController: UIViewController {
     
     @IBOutlet weak var existingBankBtn: UIButton!
+    @IBOutlet weak var usernameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameLabel.text = Globals.username
         overrideUserInterfaceStyle = .light
         existingBankBtn.layer.borderWidth = 1.0
         existingBankBtn.layer.borderColor = UIColor(red:0.24, green:0.19, blue:0.75, alpha:1.0).cgColor

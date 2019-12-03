@@ -18,6 +18,8 @@ class ExistingAccount_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let userTappedOtherThanKeyboard: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector(("closeKeyboard")))
+        view.addGestureRecognizer(userTappedOtherThanKeyboard)
         // Do any additional setup after loading the view.
     }
 
@@ -25,9 +27,12 @@ class ExistingAccount_ViewController: UIViewController {
     @IBAction func addAccount(_ sender: Any) {
         print(accountName.text!)
         print(accountNumber.text!)
-        print(verificationToken.text!
-        )
+        print(verificationToken.text!)
         print(bankName!)
     }
+    
+    @objc func closeKeyboard() {
+      view.endEditing(true)
+   }
 }
 

@@ -11,6 +11,6 @@ import UIKit
 class AccountsCardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var cardNumber: UILabel!
-    @IBOutlet weak var cardTypeLabel: UILabel!
+    @IBOutlet weak var cardType: UIImageView!
     
 }

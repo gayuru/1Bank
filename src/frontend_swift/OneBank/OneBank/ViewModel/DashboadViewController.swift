@@ -17,6 +17,7 @@ class DashboadViewController: UIViewController {
     @IBOutlet weak var cardCollectionView: UICollectionView!
     @IBOutlet weak var servicesCollectionView: UICollectionView!
     @IBOutlet weak var transactionsTableView: UITableView!
+    private var currentBank:String!
     private var services:[String] = []
     
     override func viewDidLoad() {
@@ -32,10 +33,14 @@ class DashboadViewController: UIViewController {
         transactionsTableView.dataSource = self
         cardCollectionView.backgroundColor = UIColor.clear
         servicesCollectionView.backgroundColor = UIColor.clear
+        
         // Do any additional setup after loading the view.
     }
     
     func setup(){
+        if (!Globals.username.isEmpty){
+            usernameLabel.text = Globals.username
+        }
         setttingsView.layer.cornerRadius = 5
         profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
         profileImage.clipsToBounds = true
@@ -60,6 +65,14 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
         
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goAccount"{
+            let dest = segue.destination as! AccountViewController
+            dest.currentAccount = currentBank
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == cardCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as! CardCollectionViewCell
@@ -78,7 +91,6 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
                 cell.balanceType.text = ""
                 cell.layer.masksToBounds = false
                 cell.cardTypeImage.image = UIImage(named: "")
-                cell.bankImage.image = UIImage(named: "")
                 cell.balanceLabel.numberOfLines = 1
                 cell.frame.origin.y = 40
                 break;
@@ -158,6 +170,23 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
                 
             }
             performSegue(withIdentifier: "goToAccount", sender: self)
+        }else{
+            switch indexPath.row {
+            case 1:
+                currentBank = "CBA"
+                performSegue(withIdentifier: "goAccount", sender: self)
+            case 2:
+                currentBank = "ANZ"
+                performSegue(withIdentifier: "goAccount", sender: self)
+            case 3:
+                currentBank = "NAB"
+                performSegue(withIdentifier: "goAccount", sender: self)
+            case 4:
+                currentBank = "WSP"
+                performSegue(withIdentifier: "goAccount", sender: self)
+            default:
+                performSegue(withIdentifier: "goAccount", sender: self)
+            }
         }
     }
     
@@ -176,27 +205,27 @@ extension DashboadViewController: UITableViewDelegate,UITableViewDataSource{
         switch indexPath.row {
             case 0:
                 cell.companyLogo.image = UIImage(named: "spotify")
-                cell.companyNameLabel.text = "Spotify"
+                cell.companyNameLabel.text = "Spotify (NAB)"
                 cell.amountSpendLabel.text = "$20.0"
                 cell.timeAgoLabel.text = "3 hours ago"
                 break
             case 1:
                 cell.companyLogo.image = UIImage(named: "Macdonalds")
-               cell.companyNameLabel.text = "Macdonalds"
+               cell.companyNameLabel.text = "Macdonalds (Commbank)"
                cell.amountSpendLabel.text = "$10.0"
                cell.timeAgoLabel.text = "5 hours ago"
             break
             
             case 2:
                 cell.companyLogo.image = UIImage(named: "humblerays")
-                cell.companyNameLabel.text = "Humble Rays"
+                cell.companyNameLabel.text = "Humble Rays (NAB)"
                 cell.amountSpendLabel.text = "$30.20"
                 cell.timeAgoLabel.text = "7 hours ago"
             break
             
             case 3:
                 cell.companyLogo.image = UIImage(named: "jbhifi")
-                cell.companyNameLabel.text = "JB Hifi"
+                cell.companyNameLabel.text = "JB Hifi (Commbank)"
                 cell.amountSpendLabel.text = "$200.0"
                 cell.timeAgoLabel.text = "10 hours ago"
             break

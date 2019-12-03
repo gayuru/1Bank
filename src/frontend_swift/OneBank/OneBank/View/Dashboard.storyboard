@@ -19,7 +19,7 @@
         <!--Dashboad View Controller-->
         <scene sceneID="dzh-vu-WE0">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="fbm-al-6CU" customClass="DashboadViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fbm-al-6CU" customClass="DashboadViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jib-hY-KIa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -545,6 +545,7 @@
                         <segue destination="kSZ-hb-PfT" kind="showDetail" identifier="openBank" id="iLO-3k-ajK"/>
                         <segue destination="XjX-Sz-fd5" kind="showDetail" identifier="transferMoney" id="Mo1-mq-epk"/>
                         <segue destination="VeZ-mu-D7I" kind="showDetail" identifier="closeBank" id="zpU-6e-ltR"/>
+                        <segue destination="jbX-Yf-4xb" kind="show" identifier="goAccount" id="NWT-8B-Rxe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKE-wM-vJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -568,6 +569,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqb-zO-OBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="779" y="126"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="Bd8-dM-PQq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Account" id="jbX-Yf-4xb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hcT-uj-fBS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqC-38-SiY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="192"/>
         </scene>
         <!--Transfer-->
         <scene sceneID="2dW-mu-dVK">

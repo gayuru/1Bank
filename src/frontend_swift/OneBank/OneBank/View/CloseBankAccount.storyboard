@@ -18,7 +18,7 @@
         <!--Close Account View Controller-->
         <scene sceneID="D7M-kj-pyT">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="v2C-Z3-dEj" customClass="CloseAccountViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="v2C-Z3-dEj" customClass="CloseAccountViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NWb-iA-B5h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,20 +125,20 @@
         <!--Close Account Confirmation View Controller-->
         <scene sceneID="aXP-xn-LcO">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="XA1-lX-JNi" userLabel="Close Account Confirmation View Controller" customClass="CloseConfirmation_ViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XA1-lX-JNi" userLabel="Close Account Confirmation View Controller" customClass="CloseConfirmation_ViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tVt-zQ-Bap">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="cb6-sa-WCo">
-                                <rect key="frame" x="181.5" y="58" width="51" height="62"/>
+                                <rect key="frame" x="181.5" y="14" width="51" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="6rV-Hc-wlH"/>
                                     <constraint firstAttribute="width" constant="51" id="g2s-rT-IFK"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold on !" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETV-WY-u3P">
-                                <rect key="frame" x="139" y="152" width="136" height="41"/>
+                                <rect key="frame" x="139" y="108" width="136" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="dXl-cV-Vib"/>
                                     <constraint firstAttribute="width" constant="136" id="sKq-Vs-wpP"/>
@@ -148,7 +148,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 12 400" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8X-CY-3GB">
-                                <rect key="frame" x="108.5" y="321" width="197" height="41"/>
+                                <rect key="frame" x="108.5" y="277" width="197" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="197" id="6fz-ua-3vL"/>
                                     <constraint firstAttribute="height" constant="41" id="BVF-bl-mnI"/>
@@ -158,7 +158,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You still have a  balance of" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xe0-X8-osH">
-                                <rect key="frame" x="100.5" y="202" width="213" height="92"/>
+                                <rect key="frame" x="100.5" y="158" width="213" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="213" id="DQz-RB-TOZ"/>
                                     <constraint firstAttribute="height" constant="92" id="e8R-hp-ntp"/>
@@ -168,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suB-6x-Fab" customClass="GradientButton" customModule="OneBank" customModuleProvider="target">
-                                <rect key="frame" x="42" y="401" width="330" height="439"/>
+                                <rect key="frame" x="42" y="357" width="330" height="439"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We can use this money  to open the new account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycn-xQ-BAM">
                                         <rect key="frame" x="29" y="18" width="272.5" height="61"/>

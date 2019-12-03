@@ -18,7 +18,7 @@
         <!--Transfer View Controller-->
         <scene sceneID="e0F-PB-zgX">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="38g-fa-Egc" customClass="TransferViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="38g-fa-Egc" customClass="TransferViewController" customModule="OneBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FHk-ys-oev">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -159,8 +159,8 @@
 			children = (
 				5550D7812392721E00580A9E /* OneBank.entitlements */,
 				55C58815238FC3EA00A6DC85 /* View */,
-				55C58814238FC3DD00A6DC85 /* Model */,
 				55C58813238FC3D200A6DC85 /* ViewModel */,
+				55C58814238FC3DD00A6DC85 /* Model */,
 				55C587FF238FC36F00A6DC85 /* AppDelegate.swift */,
 				55C58801238FC36F00A6DC85 /* SceneDelegate.swift */,
 				55C5880D238FC37100A6DC85 /* Info.plist */,
@@ -227,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				77DEEF602392B8D5001A808F /* Account.storyboard */,
+				775B01882392F58B00C57DCB /* Account.storyboard */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -307,6 +308,7 @@
 				555CDDEB2392D03E00ACB302 /* Transfer.storyboard in Resources */,
 				5547C90A23920C5100FFD5A4 /* ProximaNova-Regular.otf in Resources */,
 				5547C90923920C5100FFD5A4 /* Proxima Nova Thin.otf in Resources */,
+				775B01892392F58B00C57DCB /* Account.storyboard in Resources */,
 				557EA79723922494000AD213 /* InitialAccount.storyboard in Resources */,
 				55C5880C238FC37100A6DC85 /* LaunchScreen.storyboard in Resources */,
 				55C58807238FC36F00A6DC85 /* Main.storyboard in Resources */,
@@ -542,13 +544,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OneBank/OneBank.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56CT9TQ9TD;
+				DEVELOPMENT_TEAM = 6XNC2755U2;
 				INFOPLIST_FILE = OneBank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gayuru;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sogyal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -562,13 +564,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OneBank/OneBank.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56CT9TQ9TD;
+				DEVELOPMENT_TEAM = 6XNC2755U2;
 				INFOPLIST_FILE = OneBank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gayuru;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sogyal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
