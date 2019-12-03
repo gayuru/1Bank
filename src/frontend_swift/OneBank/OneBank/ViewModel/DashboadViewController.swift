@@ -87,6 +87,7 @@ extension DashboadViewController: UICollectionViewDelegate,UICollectionViewDataS
                 cell.layer.shadowRadius = 3.0
                 cell.layer.shadowOpacity = 0.5
                 // Never mask the shadow as it falls outside the view
+                cell.bankImage.image = UIImage(named: "")
                 cell.balanceLabel.text = ""
                 cell.balanceType.text = ""
                 cell.layer.masksToBounds = false
