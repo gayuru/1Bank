@@ -1,6 +1,17 @@
-# 1Bank
+<h1 align="Center">
+  <br>
+  <a href="https://github.com/gayuru/1Bank"><img src="https://imgur.com/eAIAUbI.png" alt="1Bank" width="50"></a> <br>1Bank 
+</h1>
+<p align="Center">Too many bank application to handle?<br> Unclear view of their banking tendencies?<br> <b>1Bank</b> is an iOS application that hand Control your income and expenses, get smart analysis, all through our seamless user experience.
+ 🌆<br><br>
+<img src="/app-demo.gif" height="500" alt="Travo"></p>
 
+## What problems lead us to make 1Bank ##
+🌀 Too many bank accounts to handle<br>
+😕 Unclear view of our banking tendencies<br>
+🏷️ Banks only have a partial idea of a customer's spending habits<br>
 
+## What inspired us ➡️ Open Banking 💡 ##
 presentation:- https://www.canva.com/design/DADsrsum_hc/hPbIPO_Jv9ZpuENW04mh4A/view?utm_content=DADsrsum_hc&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
 
 Too many bank application to handle? Unclear view of their banking tendencies? 1Bank is an IOS application that hand Control your income and expenses, get smart analysis, all through our seamless user experience.
