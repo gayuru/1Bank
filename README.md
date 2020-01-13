@@ -19,7 +19,7 @@
 
 - Open banking centers on the idea that you deserve to have complete access to the consumer data that is collected by banks and financial institutions. More info: https://accntu.re/33BW3qa
 
-## Benefits to the User 👥
+## 👥 Benefits to the User 
 
 - All your accounts in 1 platform
 
@@ -33,7 +33,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open and close all of your accounts with the click of a button
 
-## Benefits to Banks 🏦
+## 🏦 Benefits to Banks 
 
 - A clearer picture of your customer
 - Limitless potential with a customer's aggregated data across multiple banks
