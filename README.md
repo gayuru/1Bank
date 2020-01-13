@@ -19,25 +19,28 @@
 
 ## Benefits to the User
 
-1. All your accounts in 1 platform
-- Clear and concise views to ease your banking experience
+- All your accounts in 1 platform
 
-2.Better exposure to different banks
-- View various account types across all banks to suit your needs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear and concise views to ease your banking experience
 
-3.Easier account management
-- Open and close all of your accounts with the click of a button
+- Better exposure to different banks
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;View various account types across all banks to suit your needs
+
+- Easier account management
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open and close all of your accounts with the click of a button
 
 ## Benefits to Banks
 
-1. A clearer picture of your customer
-2. Limitless potential with a customer's aggregated data across multiple banks
-3. More users, more revenue
-- A new exciting platform to entice more customers
+- A clearer picture of your customer
+- Limitless potential with a customer's aggregated data across multiple banks
+- More users, more revenue
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A new exciting platform to entice more customers
 
-View the Presentation here :- <a href="https://www.canva.com/design/DADsrsum_hc/hPbIPO_Jv9ZpuENW04mh4A/view?utm_content=DADsrsum_hc&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"> Presentation </a>
+- View the Presentation here :- <a href="https://www.canva.com/design/DADsrsum_hc/hPbIPO_Jv9ZpuENW04mh4A/view?utm_content=DADsrsum_hc&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"> Presentation </a>
 
-## Built With
+## Built With ⚒️
 - [Swift](https://developer.apple.com/swift/) - Swift is a powerful and intuitive programming language for macOS, iOS, watchOS, tvOS and beyond. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and Swift includes modern features developers love. <br>
 - [Python](https://www.python.org/) - Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace.
 - [Figma](http://www.figma.com/) - Figma is an interface design application that runs in the browser–but it’s actually much more than that. I would go so far as to say it’s probably the best application for team-based collaborative design projects.
