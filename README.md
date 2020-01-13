@@ -38,6 +38,7 @@
 - A clearer picture of your customer
 - Limitless potential with a customer's aggregated data across multiple banks
 - More users, more revenue
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A new exciting platform to entice more customers
 
 - View the Presentation here :- <a href="https://www.canva.com/design/DADsrsum_hc/hPbIPO_Jv9ZpuENW04mh4A/view?utm_content=DADsrsum_hc&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"> Presentation </a>
