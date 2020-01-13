@@ -4,7 +4,9 @@
 </h1>
 <p align="Center">Too many bank applications to handle?<br> Unclear view of their banking tendencies?<br><br> <b>1Bank</b> is an iOS application that hand Control your income and expenses, get smart analysis, all through our seamless user experience.
  🌆<br><br>
-<img src="/app-demo.gif" height="500" alt="Travo"></p>
+<img src="src/mockups/splash.png" height="500" alt="Travo">
+<img src="src/mockups/startup.png" height="500" alt="Travo">
+<img src="src/mockups/home.png" height="500" alt="Travo"></p></p>
 
 ## What problems lead us to make 1Bank ##
 🌀 Too many bank accounts to handle<br>
